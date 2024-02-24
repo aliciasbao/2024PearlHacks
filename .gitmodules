@@ -1,0 +1,3 @@
+[submodule "NightOwl"]
+	path = NightOwl
+	url = https://github.com/deFr0ggy/NightOwl.git

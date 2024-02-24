@@ -1,0 +1,182 @@
+Received: from SA1PR03MB7029.namprd03.prod.outlook.com (2603:10b6:806:334::13)
+ by SN6PR03MB3422.namprd03.prod.outlook.com with HTTPS; Thu, 11 Jan 2024
+ 21:48:30 +0000
+Received: from MN2PR08CA0020.namprd08.prod.outlook.com (2603:10b6:208:239::25)
+ by SA1PR03MB7029.namprd03.prod.outlook.com (2603:10b6:806:334::13) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7159.23; Thu, 11 Jan
+ 2024 21:48:27 +0000
+Received: from BL6PEPF0001AB51.namprd04.prod.outlook.com
+ (2603:10b6:208:239:cafe::92) by MN2PR08CA0020.outlook.office365.com
+ (2603:10b6:208:239::25) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7181.19 via Frontend
+ Transport; Thu, 11 Jan 2024 21:48:27 +0000
+Authentication-Results: spf=pass (sender IP is 209.85.208.49)
+ smtp.mailfrom=gmail.com; dkim=pass (signature was verified)
+ header.d=gmail.com;dmarc=pass action=none header.from=gmail.com;compauth=pass
+ reason=100
+Received-SPF: Pass (protection.outlook.com: domain of gmail.com designates
+ 209.85.208.49 as permitted sender) receiver=protection.outlook.com;
+ client-ip=209.85.208.49; helo=mail-ed1-f49.google.com; pr=C
+Received: from mail-ed1-f49.google.com (209.85.208.49) by
+ BL6PEPF0001AB51.mail.protection.outlook.com (10.167.242.75) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.7181.14 via Frontend Transport; Thu, 11 Jan 2024 21:48:27 +0000
+Received: by mail-ed1-f49.google.com with SMTP id 4fb4d7f45d1cf-557678c50feso1264149a12.0
+        for <eschen@unc.edu>; Thu, 11 Jan 2024 13:48:27 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1705009706; x=1705614506; darn=unc.edu;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=6j2uNrlhyLHEDKXSBI9IERMa/nyjw/YZrSbN/fGSFiY=;
+        b=IHmFMAjMdE7nnuvt3XAI81iyf5G7+X4rarBZXVdat8cqFhj6DbF5UbsLdRk7GuhB2/
+         7BPRUh572C+pMpf2tcsjkKOmTQnoNS6Za9s2yty4914l+Lb4Eb/cHZTU3YwWZJuH8EYW
+         n+ZbCHTFA1VdTXCUlTE2dMf8mmbuHJiCyD5AoOqMwntg1dnYTvE21Z9ZaV/5kDcu9Ypi
+         mB3FPueBrL3PqDYKe2IuT+YcglH8+OD4lfoL9rSi0/WYPvZkU3IPTS1802zxmwnu6CCV
+         HnOU3acDqtKL3Up7yAjBHTuOBryS9iQqtwAAfZdpfCcMgN5zAwN8ONAB2J+wpya9NJR7
+         u6ig==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1705009706; x=1705614506;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=6j2uNrlhyLHEDKXSBI9IERMa/nyjw/YZrSbN/fGSFiY=;
+        b=vl7/cBKXA7GiugW7TLZJmhPc+RwRyhiZ/+CjBMxQ7VyYnHUypAtBxm+23jiE+MFO85
+         ZenpMSFBvGzrSq9kXnnB11sT/aCLnS2zAW/Y3L8eV2G6SL+zD/TB0P1ZHD7GXWKdtt76
+         FYofac0Nc4QqpiZhpP05snEHnyutR5QMY+FhZJEuYCznxNecBi/e9TdGw45OFSWmFqhJ
+         Jlt552uMqYNMeA0wXT5bVfeI1jKPjJ9vM44CzbC0UQqpV9YeVq5enVRuzxpHPbW4/rRS
+         nxZstkZxJfp4mSe+bFkkhIHudzdTjsSjoP613nflvFOENLgn7F3kRTn0dWv+JJGSsPnx
+         NMvQ==
+X-Gm-Message-State: AOJu0Yx7tyAn+IOe8a9VAFPMuwQReSJ6Pfp6XINS1wPOCYZAdqOWDkqZ
+	qXD/tTTax+fY305tXsR4ZdNu73xrjNm4wZIWneg=
+X-Google-Smtp-Source: AGHT+IG/VQ+SOd0FrHPeBchZlPEcF6A8DwdtRiyzYfcozj5/YG2lihoVQf+LyfroJDWm5nry4uMDzWra/QPv+kAxVV4=
+X-Received: by 2002:a05:6402:798:b0:558:b8fe:5b8b with SMTP id
+ d24-20020a056402079800b00558b8fe5b8bmr5710edy.3.1705009705868; Thu, 11 Jan
+ 2024 13:48:25 -0800 (PST)
+Received: by 2002:a05:6f02:c391:b0:60:4aa9:15e0 with HTTP; Thu, 11 Jan 2024
+ 13:48:25 -0800 (PST)
+From: Dr Michael Scott <bettebeaubrunfca68@gmail.com>
+Date: Thu, 11 Jan 2024 21:48:25 +0000
+Message-ID: <CAOO0SbYxOSY8OjRKD2GoADYsrLWE=TJ0u=k13+31gD5PaDsCjA@mail.gmail.com>
+Subject: 0060502 Job posting **Student***Temporary Personal Assistant
+To: undisclosed-recipients:;
+Content-Type: text/plain; charset="UTF-8"
+Bcc: eschen@unc.edu
+Return-Path: bettebeaubrunfca68@gmail.com
+X-MS-Exchange-Organization-ExpirationStartTime: 11 Jan 2024 21:48:27.1606
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 4822ebe1-1d4d-41a8-4917-08dc12ef0b0c
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 58b3d54f-16c9-42d3-af08-1fcabd095666:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ BL6PEPF0001AB51:EE_|SA1PR03MB7029:EE_|SN6PR03MB3422:EE_
+X-MS-Exchange-Organization-AuthSource:
+ BL6PEPF0001AB51.namprd04.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id: 4822ebe1-1d4d-41a8-4917-08dc12ef0b0c
+X-MS-Exchange-AtpMessageProperties: SA|SL
+X-MS-Exchange-Organization-SCL: 5
+X-Forefront-Antispam-Report:
+ CIP:209.85.208.49;CTRY:US;LANG:en;SCL:5;SRV:;IPV:NLI;SFV:SPM;H:mail-ed1-f49.google.com;PTR:mail-ed1-f49.google.com;CAT:SPM;SFTY:9.25;SFS:(13230031)(4636009)(109986022)(451199024)(58800400005)(7636003)(34756004)(7596003)(966005)(8676002)(1096003)(4006050)(22186003)(75640400001)(55446002)(76482006)(42186006)(86362001)(336012)(356005)(26005)(73392003)(82202003)(4744005)(5660300002)(520074005)(86872007)(118400200003);DIR:INB;SFTY:9.25;
+X-Microsoft-Antispam: BCL:0;
+Content-Transfer-Encoding: quoted-printable
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 11 Jan 2024 21:48:27.0824
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 4822ebe1-1d4d-41a8-4917-08dc12ef0b0c
+X-MS-Exchange-CrossTenant-Id: 58b3d54f-16c9-42d3-af08-1fcabd095666
+X-MS-Exchange-CrossTenant-AuthSource:
+ BL6PEPF0001AB51.namprd04.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SA1PR03MB7029
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:03.3351983
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.7181.019
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:J;OFR:SpamFilterAuthJ;ENG:(910001)(944506478)(944626604)(920097)(930097)(3100021)(140003);RF:JunkEmail;
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?czVsOEFJVWN0S0RGUHJkVTV4TklPQVhPRHVOWlphOVpBanlMLzViYTI4NGxq?=
+ =?utf-8?B?QmRJVllNN1hRWTNiRlVDY1JyRHU0K2JGUU4vU0J5R2ZNbW1TTDlPRERDdFBF?=
+ =?utf-8?B?NTFzalRiWkxBOEQwU1BtVUZUODl3cHVXUXFzQjJWbUZlSDJrZ3ZqbmM4NWdu?=
+ =?utf-8?B?aFhMSnJacldrc1hsZTN1QUxYYXN5OWZ4SFhTdDBVU255NXEvL1QzaCtyTktq?=
+ =?utf-8?B?ZE1LSTRHVHJCNWFnSGR2Tkk5SXA3Q3phbGhtZENhUmZoZ3poSGlRZnpDd0RR?=
+ =?utf-8?B?dWlIT29DdGxpVHJ2R2dZL3B5TExRQ0I3YUJSdVV1T2E4VmtnSk9xZHpzZFNI?=
+ =?utf-8?B?UEFlWlJ3eE9iekZiWmR6N1BFM3pzS0tIbWNrZHJ5eEU2VHljclRveXpPV0xp?=
+ =?utf-8?B?L3BGQnltR2ljaExGWUprZFRMeEkzaExGblZuVVdlcW1jakFoTWNXSVNJQmtE?=
+ =?utf-8?B?RTg4Y3RmdUZKS1EveDRQeVFMRTlkYUdmRGhOM1hLT0xpeFFYT3ZWZnZTblQz?=
+ =?utf-8?B?ZmF4RU9wSTNtWHBtRSt0TkczQTVhRFREdjYrV1BoMGdCalB2ckVZbFp0OTVS?=
+ =?utf-8?B?aUNrd1Y1TGcrTXU3bWRPa0RJUXVXTGRrVEp0b0ljanhqZ0YyT1hoRENuQ1VB?=
+ =?utf-8?B?YUFocUNNWFNBRnh0Z3BsamVWR2I2bnUxRjVYeDBNS0tkbkVNZG9LTXVUZ3Ry?=
+ =?utf-8?B?aFg4UzVrb2NMOGxoNGZCK0l4VTc5b0lRSmdOVUdxazg3TnNDT25hYlNBSDhv?=
+ =?utf-8?B?RVBHc0NrR1Y5OTlLb1ZLcDFjRURBV0RGazJPQ2d6UERXTjZ0N21tZENNZGdD?=
+ =?utf-8?B?OXg4R0psaVFlYUJVTVErbVdHblBjaFFScW9Wbnl3N05yMUlwODdqaWhjZHRF?=
+ =?utf-8?B?ejFUU09pYmJLMFIrcEtuM1lHTmNMblpxMGk5U0lWODNtak9lcmVVYmhSSlR5?=
+ =?utf-8?B?M2RCOTl3ckhsVDJXb2E5VmxGc3VMN1lrSCtDVStDTWk3dk5ZZmZDUmExWkRn?=
+ =?utf-8?B?T1NvM2tkWUtJTlI4ZFZFUUpBN0pva1ZaV2pBaE96eWpPSWl3WkZUeHVyN2Y4?=
+ =?utf-8?B?dEEydjBIZlM1aTJ3V0pPS05xaVUwaTFxc3YvUWFvalJUc2Q3VzI4aGJyQWJu?=
+ =?utf-8?B?cC9HRDZWOStqZG8rWUQ4OEpvOHBONDlIME1xSWt0TldNZ1kzRnNRa1VJTmd4?=
+ =?utf-8?B?Z2U0OVBRbTlFQkh1MlRjVG82eHorZkJDM0VDZExKSjEydlhPSmVtSlkyWmNQ?=
+ =?utf-8?B?bE5PKytyanpyUW11ZnlsT21temNCblUxT3JkcFdrRUNpQTVnWEdORnc2QUht?=
+ =?utf-8?B?ZGRYSDA1QytQcG1Xczk1TGxhMU9TQjdqZHBjM0ZWbzc2emZpNnJzajVZWE8z?=
+ =?utf-8?B?S01DVkE0dXZxT2srbks4SWJSQ3BkS1FtWEcrWi9wYVRGTVhZYmZjVERlQys2?=
+ =?utf-8?B?WkVpUXlqdkhycStCNjB2WnlxNW5keEgxVE1aTDU3SG1PNkFpeVhpSzNqZnh2?=
+ =?utf-8?B?Qmlja2ljMEtnekxlaHNEUWtjaVFyUDhZeDJGRUlWcWZRb3NpVFhqTllqTVVl?=
+ =?utf-8?B?bHZOeEdrYjEwK0FVcGFUYmh5WnBGaTVYTnQ1TURKZ3R4aTFERTQrTXM1NGhT?=
+ =?utf-8?B?Q1hrNGw3RUhqVEsyVFRMVmt3OWRVUUMvS3h5WHcvb1FzMDYvLzFyb21aOHVQ?=
+ =?utf-8?B?RFZjNGJKdWlwUVFZazc4TDk0QnFsUEEyL3lLcWVaWXhITkxZVzk5NkxKWC9v?=
+ =?utf-8?B?RDVHanl2VlQ4MXlUQjA4cXd3NjVxbHQyTTF1b3pVbDdicEZxSDNnY3RoajRV?=
+ =?utf-8?B?ekV2QUw4RVVsZS9uTEN5SmxIN2E3YmRrZkkwaVdGaWxvdnFlQ3lMdlB1WHdP?=
+ =?utf-8?B?MTk5WHFYUDNyMWpzOG81ZFpzUERWeXduandlTlBGQnNwVEpockc0UitVaVFE?=
+ =?utf-8?B?Uy8wK1VmWEJ5STRqSVZvOHdmY21sSGFyR0pka3JxQ2JKTmxXYmI2VnZ5cFRD?=
+ =?utf-8?B?Ums4VW1HaGlON3FUcWo1eEhNVjVHNlFtRWJySXo4eTU2WTZoazR4b3Q0cGpC?=
+ =?utf-8?B?MjNoQTVkdjFSTENlcE1DVzNtaEM5RDEzLzNlUVROUGlZK1F5aDQ4VExudWw0?=
+ =?utf-8?B?dStUek9yYTRQVE94R3hhMnNaK3lvbDNROVBsZkJjbk1xcnBBemJhMVRVNDRo?=
+ =?utf-8?B?WHJTcU9jVmIzd2hBZEltWmxGWTJCZWdPWTh0OFc2bytxZGxHaU1IS25XTENU?=
+ =?utf-8?B?T1ZBYVJkd3QvN2svS0Jta0c0RXk0enJyNTFDbzUzK3VVd0dmbURBd280QzRK?=
+ =?utf-8?B?bWtYYXYyZit4R0JrZHBSTlpOQ2VHTVNmUkRmMWY0M3NtUUthMFk5SzBYRjRl?=
+ =?utf-8?B?aGFNWFdHbU1PZmVWeWI5NEV1WkYxREZLellacVU1MG1mZlBEWXZCZHgwN1NK?=
+ =?utf-8?B?YTRsKzUxVStDTUtqbi9Zd0x3ME9XdGFZaEozVmRYTEpDVDkxS0NRdFRLRng3?=
+ =?utf-8?B?M2tBeFNNUStBcGVTVTk4Q1FUb0swTW1PVmVLV3JlbGNQNitSNW8xUVFrQ3Q2?=
+ =?utf-8?B?RkJRTjFDa1lmSE93TzJHdnZsa3hELzF2SG1SckxMa0RYeVhwVVowQXRSNkFm?=
+ =?utf-8?B?dkxtUDdwWmo0Rzc4NmhGVGJDdVpkeS9hYlNSVkRtVHp3d1lYR1dIVU4xTHl0?=
+ =?utf-8?B?RVJrUi9pUzUzTkR5K3E1Q2VqaFl4eU5TblphcUdQSEtXblo2Q3JhTGVqYUxz?=
+ =?utf-8?B?b0RmSHQxRXl2MVVnQ3JYVE5NVC9TYkJNNUMvTnJnVkpYbkRGdFpxSnJ1ekor?=
+ =?utf-8?B?Z1FqRHNYb2IrMmdGK2VlV3FLSHl3NEJUOFlzdi96STRkdjQycHhVZitRNFVU?=
+ =?utf-8?B?ckRvMXlRanlDQkt1QTF0Q3oraC9UaE5pWk1wZXNZckZWTUwvYWNxNmpUNWNM?=
+ =?utf-8?B?SmhEbGZzZ2JHRzVyV1RtMk1qakZhS1AwUFBIOTRRdEVXelpOTEVtUEkxRm5N?=
+ =?utf-8?B?ZnFmSHBxcmNGSSt5a2UrYVcwU2FGd2xFYk9QQjlzQ3l6TGJJRnc0VU9zQUN5?=
+ =?utf-8?B?UXRmRnAveWFUalpzQXVESXBkRWUyKzBsdGl4YkJTYXVNY3JzZVRTZmZQR0pV?=
+ =?utf-8?B?Z1dkUkxla1p4QlBHVGJPUFVFem9MSnZXWVdLVnZEWjR5TnB2a1Z3ZnBLbmhR?=
+ =?utf-8?B?RXUxTnhQamhrcituTlllN0NGbDhBZThXTUR3czZ3VjBJUUl1MG9sOHZYWmtu?=
+ =?utf-8?B?K2x5dkJiR2g0K3V5VHhOMHJuSGNuMVh2QzFOQWpGdGI0cVJjaGZJYW5Od0J5?=
+ =?utf-8?B?cW85cFcwZWxkS29kTnJHTzR3bjRSd2xmNjIxMWtVODdMR0QrWDJZTmd3YWYr?=
+ =?utf-8?B?VVJDMjhlOFEzbDIrRnVSZTlORW9BUEIrbHo3NW9NbXZtZ0dHVFVwak56aStG?=
+ =?utf-8?B?ZUNjdmNMRnZOd1N6ZXhHN0NHdGVaaTgzd0NwK051NVFJTlBvTXNxcXVpb2JV?=
+ =?utf-8?B?QjZ5NnQ5d3d2NFU2Y3huYjlYL0RDQ2ZNQ2UrOE13NnlHWExDNUluY3NEUmdY?=
+ =?utf-8?B?WGxDSWVGVHc5VEpOc1VSTm1iMFdOQVdLOU4waEs0Ty80L0tTS21nNUlONXNB?=
+ =?utf-8?B?MXRuYnJwMHRBRGV6SXVvaDFmalpyTE5NanNNSXR4WitJc2xMaW0ydU9vdktQ?=
+ =?utf-8?B?cXlnME5EN3U2RStkSHJkdzNjYVRVZVk1K0F6TXVMTmZtL00rb1JRNDhWVkNG?=
+ =?utf-8?B?Qmg5TEFscVg5UjltWHBDblUyWkZoWkVHUml0akJSTmFVR3ZyT29WbVp2MmV5?=
+ =?utf-8?B?V3ZJWisvU2VpdVJ2UTlSU3lZY25jSUZKbHkvY3M5UjBCQi9tc0RlbGphQlB0?=
+ =?utf-8?Q?eoIskLzNPgIVQd+ktp1fmlHg=3D?=
+MIME-Version: 1.0
+
+[You don't often get email from bettebeaubrunfca68@gmail.com. Learn why thi=
+s is important at https://aka.ms/LearnAboutSenderIdentification ]
+
+The Division of Human Resources assists you in finding part-time work
+to help pay for some of your college expenses. There are many more
+benefits when you work during college. Working 3-15 hours per week
+while in school actually has been shown to help academic achievement.
+Ensure you are building the skills employers want.Contact And Apply
+with the licensed Employers Seeking PERSONAL ASSISTANTS.
+https://share.hsforms.com/11LqZHpQVSSi2mhfO4tNBGgqkugp
+
+Position Details:
+Job Title: Personal Assistant
+Duration: Part-time/Full-Time
+Location: [Remote]

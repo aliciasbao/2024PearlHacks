@@ -1,0 +1,271 @@
+Received: from DM6PR03MB5130.namprd03.prod.outlook.com (2603:10b6:5:1e3::17)
+ by SN6PR03MB3422.namprd03.prod.outlook.com with HTTPS; Sat, 13 Jan 2024
+ 22:51:36 +0000
+Received: from CH0P221CA0046.NAMP221.PROD.OUTLOOK.COM (2603:10b6:610:11d::19)
+ by DM6PR03MB5130.namprd03.prod.outlook.com (2603:10b6:5:1e3::17) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7181.19; Sat, 13 Jan
+ 2024 22:51:35 +0000
+Received: from DS2PEPF00003442.namprd04.prod.outlook.com
+ (2603:10b6:610:11d:cafe::37) by CH0P221CA0046.outlook.office365.com
+ (2603:10b6:610:11d::19) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7181.23 via Frontend
+ Transport; Sat, 13 Jan 2024 22:51:34 +0000
+Authentication-Results: spf=pass (sender IP is 209.85.222.170)
+ smtp.mailfrom=gmail.com; dkim=pass (signature was verified)
+ header.d=gmail.com;dmarc=pass action=none header.from=gmail.com;compauth=pass
+ reason=100
+Received-SPF: Pass (protection.outlook.com: domain of gmail.com designates
+ 209.85.222.170 as permitted sender) receiver=protection.outlook.com;
+ client-ip=209.85.222.170; helo=mail-qk1-f170.google.com; pr=C
+Received: from mail-qk1-f170.google.com (209.85.222.170) by
+ DS2PEPF00003442.mail.protection.outlook.com (10.167.17.69) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.7181.14 via Frontend Transport; Sat, 13 Jan 2024 22:51:34 +0000
+Received: by mail-qk1-f170.google.com with SMTP id af79cd13be357-7834879d886so122000585a.3
+        for <eschen@unc.edu>; Sat, 13 Jan 2024 14:51:34 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1705186294; x=1705791094; darn=unc.edu;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=jqWncU7gK1vUcYcQofrebCDrrISJfdnjbfmvNZfCxYE=;
+        b=Ap1NYHcj3QJBpSD1SzBt7Dbapf4uc/2U6XEjBAPBJU0ptrHKboUfZ9PvwJhj9slL3/
+         Mcl8Nl+sFM9JwSPCwENs73/44yACm/44ItoFp6gEZdvDNXSFmtcqxU+nchbUdUW2MUG+
+         6vsl0A8A4Q1MTEUsIdckKJVAYL3OLG74o/Zk6H7XiFuN20m5lXQTxDNh2Vwo3C8IQiSA
+         qYroKr78PiioBI3+oJ0waAjGOmpSrj97qy7XSBKR2v02d9y7vZGUvJQuf5JIvcf+yrqL
+         xRXA5kKlaXbqxHX9GdSEOSWEbfLlMCYXQh4ezasWS/AyR+3WtW+B8eOjSWFENiQx/npr
+         4uFA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1705186294; x=1705791094;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=jqWncU7gK1vUcYcQofrebCDrrISJfdnjbfmvNZfCxYE=;
+        b=PUqII6cz0PMesllgiPX8bvuc16oKr41VN/REtcDhxt/PCUzXOXD5m8UGvJYOnYwCFZ
+         iCzK+zA9jRVfKK+qPmbMXLUc73Kh5y4XPdGpkH8mYWzESLXZv5MIf3pXEePC/mP6cd4G
+         e+WwKQCMsgAoAjJ/rPDmDzfehpMe2Rv74gNDHc2gfb1HBtSrwBjxHK72YE/xB7Z6nTRo
+         Bp+E4JmLl76Ngm5Fc8fj/DH1EsDrgvCu+mEQPnBfmoDlLmSizU8eqaqh9svWHsksPDUJ
+         xhvR3KaTOFRcy1MQidf13DXTEC9mMG+kwdB9A0VDc0BXMPEcBY+vCv+lCLdV5JFFzxq0
+         /HYQ==
+X-Gm-Message-State: AOJu0YzmNKmVEVGdwB+nfITxTY69HYYKS4K8//Zx4yFedmm/rzqDOD6x
+	4sXSCSo/1xiJwovb5uR7i5/4yYna61Zj6WPpOtGNficUjMl3CzC/
+X-Google-Smtp-Source: AGHT+IG+GCFdD9qyK0uM9tWUyEq++ROitmNPcoiJIJRQQjeuuQGj8h6LwvQNm+bApI25UzeUNzRS2EWgV88AOygAhYU=
+X-Received: by 2002:a05:620a:8323:b0:783:3115:f4ca with SMTP id
+ pa35-20020a05620a832300b007833115f4camr4116322qkn.11.1705186273476; Sat, 13
+ Jan 2024 14:51:13 -0800 (PST)
+From: JOB INFORMATION SUPPORT <profjeffreykennedy@gmail.com>
+Date: Sat, 13 Jan 2024 14:51:02 -0800
+Message-ID: <CADuQSwFp0KAoncccwrTWOJgGAROZBdBuRAc5HtFrKgwv-sJ5DA@mail.gmail.com>
+Subject: Part-time Research Opportunity for UNC Students
+To: undisclosed-recipients:;
+Content-Type: multipart/alternative; boundary="0000000000001b4390060edb9e64"
+Bcc: eschen@unc.edu
+Return-Path: profjeffreykennedy@gmail.com
+X-MS-Exchange-Organization-ExpirationStartTime: 13 Jan 2024 22:51:34.8410
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 1ad4feba-173b-4638-f33e-08dc148a3181
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 58b3d54f-16c9-42d3-af08-1fcabd095666:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ DS2PEPF00003442:EE_|DM6PR03MB5130:EE_|SN6PR03MB3422:EE_
+X-MS-Exchange-Organization-AuthSource:
+ DS2PEPF00003442.namprd04.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id: 1ad4feba-173b-4638-f33e-08dc148a3181
+X-MS-Exchange-AtpMessageProperties: SA|SL
+X-MS-Exchange-Organization-SCL: 5
+X-Forefront-Antispam-Report:
+ CIP:209.85.222.170;CTRY:US;LANG:en;SCL:5;SRV:;IPV:NLI;SFV:SPM;H:mail-qk1-f170.google.com;PTR:mail-qk1-f170.google.com;CAT:SPM;SFTY:9.25;SFS:(13230031)(4636009)(84050400002)(451199024)(109986022)(5660300002)(8676002)(1096003)(4006050)(73392003)(26005)(336012)(82202003)(55446002)(83380400001)(7636003)(356005)(86362001)(7596003)(6666004)(33964004)(66899024)(40140700001)(34756004)(22186003)(76482006)(42186006)(75640400001)(136160200007)(58800400005)(136860200002)(116970200001)(124970200002);DIR:INB;SFTY:9.25;
+X-Microsoft-Antispam: BCL:0;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 13 Jan 2024 22:51:34.8097
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 1ad4feba-173b-4638-f33e-08dc148a3181
+X-MS-Exchange-CrossTenant-Id: 58b3d54f-16c9-42d3-af08-1fcabd095666
+X-MS-Exchange-CrossTenant-AuthSource:
+ DS2PEPF00003442.namprd04.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: DM6PR03MB5130
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:01.7950263
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.7181.019
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:J;OFR:SpamFilterAuthJ;ENG:(910001)(944506478)(944626604)(920097)(930097)(3100021)(140003);RF:JunkEmail;
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?Nndwb0xRREJwMkprL1VSU3M4TGpmZ2cvNWpjSUtvTldOKzlwYkJ3ZHRQK2Iy?=
+ =?utf-8?B?TFcwS1l4YjZLY0VMbE5FZFcyaVZzSHBXVjdzNGo0aE1qUCtRVCtmTXJyTkk0?=
+ =?utf-8?B?N1c1aWcxSkh0dTU4ZXRNVlVIckM5Sm5hc3l4V0pxMFpobC9yNDdwYS9TQW5k?=
+ =?utf-8?B?cWpGbXNEOHpDV0hMZ2Q5VlRNUUliWEtGRVVVNVJ4QTA3UjlsN2R4TTdlZEhR?=
+ =?utf-8?B?b2h1QzVqSGhVbVFib2syR3FPWGMxTjBkYitmUnpRc0V4dTFaQllxNHZxeUl0?=
+ =?utf-8?B?bjRKdzg3OEJiV2xiVDJJL0tGWkZ3Zk9tMExqcDE0WDEwYVFCK0xJY0RObUpC?=
+ =?utf-8?B?bmhKTnJZNTRKMFpiaTBreFArMGtBNXN5M1ZBeEJyWDdlRTNTcTdneURLanFV?=
+ =?utf-8?B?Z1RLQXg3TjR3VUExc2FxZE8xR1Q1eW83dGY2OXlPSHV6YWZ0Z2dCejE5djJO?=
+ =?utf-8?B?Wng5VUhRd2lpZ2tYM0NQNmR2YUhGdW1qTlFINklyUGpNS0FPeUJ3a3E1WWtU?=
+ =?utf-8?B?Tk44eWIrVGlQQW5rOTVFeU0vajhoSXJBTDhYTE14WVd3bldSTUorRlg0dFNR?=
+ =?utf-8?B?UFlMR1YzTlI2UXBva05RQ0ZiQU1hVGErVDFhTEY3QldTaTBPQkhLREJRSWp0?=
+ =?utf-8?B?Tk52ODUzZDFRRUR6RHBXaXd1WGVlaW1lS1Vac0pKUU5ldlZtZ2Q1aG9tUHB0?=
+ =?utf-8?B?RXJCb2ZnTTJEQnFGNDRMeGlRcHJ3QUxpWVZiZVNoT255WHZ0YW0wV3MwZ21r?=
+ =?utf-8?B?aWlNN2FBV1U5WE9KSXgzNFV6RTJLaGtpTjh4OHFLdWJRRnl0eG94Q1Q2OVIy?=
+ =?utf-8?B?K0ptSzhsTUZQK3JkT0tEb2c1cFQvRUVEK0tzZVEwUkhhTVNVNnNLVnlJUFBM?=
+ =?utf-8?B?Nkp1NVo4ZmlaNGNtLzBlTVFteHE5Vmg5SXRlWDJxcmg3TVd0Ny9nczlhMVhY?=
+ =?utf-8?B?dWZISFpQZnh3QTlXbEovbUQ3STcyOSsrZ1lMay9uVXNVRms4ODRjM2hXWnBH?=
+ =?utf-8?B?eE5DczVQYUR1eFY1czU0Y29BU3c3UHVPam9RYzBvQ2w4dHptcVhhbWc1SVBk?=
+ =?utf-8?B?V1pJYnNLWkVYY1dXK2xpMGpVWFB4NGlUWjY4S3BtYlg5dUVqbXFWTHVnR1h0?=
+ =?utf-8?B?ZU1sS0lwRTk0WUtaMi90NVYweURXWTNPMVdUOEZNQUZoeU1ibVQrYUF5bjcr?=
+ =?utf-8?B?Vk1qVmRHbEFEWnMwL1JBQnNicUQ4WWxwWEVMZDZ1TGUzNTFIdDU0d0lnV3Bx?=
+ =?utf-8?B?cGJZUmtlY2RmRG1CdGpqVVR4VlJQS080YnlUMTZCZ2lweHpwNDRXTW1SUDBr?=
+ =?utf-8?B?dnJuNm5PcmY0V2NFc1E3T3dRSjRxSkdoV1ozT29XVkZWdWRkY2RqVzVhTzNR?=
+ =?utf-8?B?di9jdUw4eTlhcjRwV2F1RUNaU0xrOGNhOEdNNUc3aWM4QXpCTmpXUGRaa1FO?=
+ =?utf-8?B?STQ4TWd5S1BESGgvaG5WNzd2NjNwZ0pPN29EdzFRbG5ySW1qVWQ1Nkd5eEtw?=
+ =?utf-8?B?R09XNkFKQW9sRWMwQVovZU9IVDRMeXNvcGtWY2dzZnZ3SzNKZndLVStvSzRi?=
+ =?utf-8?B?NU8xWGlaVG5lQUlGRk1JR2dZVDhoUHFBUlQ3My9FVDl5ZVRpRnhsL0JkYUZV?=
+ =?utf-8?B?eHpXN2Zya0hGOEFkVGNCRkh0K1RzdHZzVm5DeUtuS0hPQTdmc0R3bFo1d1Ny?=
+ =?utf-8?B?TzFZMHJYT1NBRlNhTjd4c25taFJIS0gybG82WG1QSWY3K3RuRFhHUkQxamxz?=
+ =?utf-8?B?U09seWdvMXVyY0poRjl5SnZWR2k4VStFdytyVjRLQUNBUzZ3MlBqUUpwdXUv?=
+ =?utf-8?B?TE1Wejd5a0V1dEhBZ1Nxc3JTVmtWMEFuRDNGWnpYWUs5WnlwWVdIMlBQWTJQ?=
+ =?utf-8?B?QVVmWkpMVGNFN2JneFd6U0dIWmE0Q2FMU0xBVWZTRUpzWlhvRWtDYU52MUtI?=
+ =?utf-8?B?empnUXV5ZGpJbXFoOHd5T2xSd1ZEQXVFWmtJSzZsejhhSDRZdlpDRTdENVNi?=
+ =?utf-8?B?N0ZGb0xMc1M2YTdhcWhrNUNPTEhKQnRzQm5KejB3SkJjZGthampPa25YOXc0?=
+ =?utf-8?B?UU5RVTl2M0c4SlBhNzRzMGNJdE8yRnF4S1FvWFIwazk0M3VlYkdMZzl4UXdB?=
+ =?utf-8?B?VUcwUG5LeHpMbDh6SElBOFhmSWJkSTZmQXppSUhkQkdxcTVOTGorbUl6aUEr?=
+ =?utf-8?B?Y0lXL2JmM0VhNzAwWDZSM0c5Vk1tbjJXNi9aRFZwVUVtaldrdjNGOEtxRm5k?=
+ =?utf-8?B?bmJTWmlpZWI2SW5lN1JiVnJUL0hJSVVYc1hUNlZGdWZyOXN2TXNMWURodmFT?=
+ =?utf-8?B?NWx5a0VDaVMwN0FPamJJRU5YOTdQWUF5NjY3ekxYa0kvb0pxQ1RMdW90OWxh?=
+ =?utf-8?B?eFl3Tkl5WjZvYXFmNVNHRlhVN1FLNW9lcUlOL2RBU3Q4QnNCTExCbEpmdTZ4?=
+ =?utf-8?B?TnhNcEk4c2MzOTNCUXJnRlVsN2lkVFI3LzdaZnR3T1QzSEZZdWhHZFBDRTNz?=
+ =?utf-8?B?UHJoOHJ5YUlzaVNrR0djT1lvVm9JSXN3emRVM2pIV1FHbEovdWkvZ015RXhT?=
+ =?utf-8?B?UVFoK2p3Q2h6YTAwL0lXL0o3TnlDTE10T1RzL1ZDODNQOGM4NDJIcytIQk84?=
+ =?utf-8?B?dGdvdmR6SWI2VkMrdkhITTdMaTFVWkMzV2NLblp1Z01RWDlnUVU1a3Nwb1dG?=
+ =?utf-8?B?UDk0dFcyeFR4T1ZKS2FKaVU5RnNwQzZ1SWtCeHkveWZJajRScFQwNHlubzB2?=
+ =?utf-8?B?eHdIc1c1b0M2czJtcEVOQjhRcGVXY1Q4d1lBbmxBc1dtNkQ5cElPNWdpenlT?=
+ =?utf-8?B?VzkxNm9zbVJLVUs1TFo0Q05wZFJSRVZuSFdINDZDRVFTQzBZU1MrTmxNUWpl?=
+ =?utf-8?B?a3VuSTQrQS9GQXdwUm8rZmZkNDRvNnBqNXIvUU9wclMrN0QzYUh6QmxlZnRv?=
+ =?utf-8?B?dkVjOEtzWnBtNmU5a1NvRmk0Sk42dVFvZWJXdG5pcXh3T1ZEb3lkdE1KM3Bv?=
+ =?utf-8?B?L0xoYnhXZ2FQQ3p4c0JPVk1WLzFVVnhtQmliZ0dZcGhSNnZWS2NqRlk5YnRa?=
+ =?utf-8?B?NnMxUUtSWUExMnNFbTNSbjNWQThlWXhKbXRtcEtGaDZIL0FONWtoS0o5NDNk?=
+ =?utf-8?B?TkdGM0Y4WnpDS1hPU3B0citwL01HdjFiWElBQTFMNVNiYmU1dERWZVpxYTdq?=
+ =?utf-8?B?anBXUlpNWG84QmhpK3d6Y2x0UTFpdnFRMlVrQW9xRWVPSnQ2SmNnYkQ4bVpP?=
+ =?utf-8?B?UzV6b09RbEtvYU00SXNHSllQc1pleHRtMk5rTk10ZXhFZmhvbThUK0t2d1dM?=
+ =?utf-8?B?UFpqOGkxRWdSYU1xanpMVWx5eHBLUi9lZnUrYUh3cVBzcGhaRnlyaUpkbW5v?=
+ =?utf-8?B?Q1EvYmlTSytvL0FaU0MydDFWWit6N1BRb3ZqL1lyWGh6aGx4VUVqRmFmeFBF?=
+ =?utf-8?B?dEVaYVdDM1cwZUFEMVk3eU5rZWUrUmhTUW9YK2hwS3pEbW9hZW8yd1NKbm8r?=
+ =?utf-8?B?VytrNjFzWVpGc0loT1lVb0c4YkNZdEVKZ2tRSW1NRDFkNEZvYWRaVlRIaXJ5?=
+ =?utf-8?B?czNJLzBaNTM5WHBKcG94U3JFTHBua3dyeDZmNkFleWNYWjRQNGpFUXl2YlJz?=
+ =?utf-8?B?OGdiK1NNL0xvY25kTEw5aW1pWjdxZHNvT0F1VDY5SzQxWDhYZjBtcDEvRjZQ?=
+ =?utf-8?B?MnE0YXdvNUxIOUxVOElCSG8rK05YOXVOQ1M3RGtCaTdLQnA3Ny93SWJRV0wx?=
+ =?utf-8?B?ZUJDNmdqTjZtNUNJeXR2WkRUSEJFbXYrZU12aFV2dVpvemFWTE80dlpNQXRt?=
+ =?utf-8?B?dmg5RWxHc1liKzYzbXEvbXlKSlRQTUN2TUtVc0k2RE9na0ZnR0U3R0ZwaUpo?=
+ =?utf-8?Q?bZtZ2bkmUQHukwnI1e6BJm7I=3D?=
+MIME-Version: 1.0
+
+--0000000000001b4390060edb9e64
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+You don't often get email from profjeffreykennedy@gmail.com. Learn why this=
+ is important<https://aka.ms/LearnAboutSenderIdentification>
+Dear Students,
+
+I trust this email finds you in good health, I am reaching out to extend an=
+ invitation for your involvement in a captivating interdisciplinary researc=
+h project. This unique opportunity involves remote data collection, with a =
+weekly compensation of 400 USD.
+The tasks are straightforward, adaptable, and require minimal prior experie=
+nce, offering flexibility to align with your schedule, Regardless of your d=
+epartment, all students are welcome to apply. If you are interested, Kindly=
+ share the following information.
+
+Full Name
+Cell Phone Number
+Department
+Year of Study
+
+Feel free to submit this information via email, or you can reach out to Pro=
+fessor Jay at (769) 307-1325 via text for further details. Thank you for co=
+nsidering this opportunity, and we look forward to potentially working with=
+ you in the future.
+
+Best regards,
+
+Michael Jay
+Professor
+Department of Molecular and Pharmaceutics
+
+--0000000000001b4390060edb9e64
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+</head>
+<body>
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" styl=
+e=3D"cellpadding:0;border:0;cellspacing:0;display:table;width:100%;table-la=
+yout:fixed;border-collapse:seperate;float:none;" align=3D"left">
+<tbody style=3D"display:block;">
+<tr>
+<td valign=3D"middle" width=3D"1px" bgcolor=3D"#A6A6A6" cellpadding=3D"7px =
+2px 7px 2px" style=3D"padding:7px 2px 7px 2px;background-color:#A6A6A6;vali=
+gn:middle">
+</td>
+<td valign=3D"middle" width=3D"100%" bgcolor=3D"#EAEAEA" cellpadding=3D"7px=
+ 5px 7px 15px" color=3D"#212121" style=3D"width:100%;background-color:#EAEA=
+EA;padding:7px 5px 7px 15px;font-family:wf_segoe-ui_normal,Segoe UI,Segoe W=
+P,Tahoma,Arial, sans-serif;font-size:12px;font-weight:normal;color:#212121;=
+text-align:left;word-wrap:break-word;">
+<div>You don't often get email from profjeffreykennedy@gmail.com. <a href=
+=3D"https://aka.ms/LearnAboutSenderIdentification">
+Learn why this is important</a></div>
+</td>
+<td valign=3D"middle" align=3D"left" width=3D"75px" bgcolor=3D"#EAEAEA" cel=
+lpadding=3D"7px 5px 7px 5px" color=3D"#212121" style=3D"width:75px;backgrou=
+nd-color:#EAEAEA;padding:7px 5px 7px 5px;font-family:wf_segoe-ui_normal,Seg=
+oe UI,Segoe WP,Tahoma,Arial, sans-serif;font-size:12px;font-weight:normal;c=
+olor:#212121;text-align:left;word-wrap:break-word;align:left">
+</td>
+</tr>
+</tbody>
+</table>
+<div>
+<div dir=3D"ltr">Dear Students,&nbsp;
+<div><br>
+</div>
+<div>I trust this email finds you in&nbsp;good health, I am reaching out to=
+ extend an invitation for your involvement&nbsp;in a captivating interdisci=
+plinary research project. This unique opportunity involves remote data coll=
+ection, with a weekly compensation of 400
+ USD.&nbsp;</div>
+<div>The tasks are straightforward, adaptable, and require minimal prior ex=
+perience, offering flexibility to align with your schedule, Regardless of y=
+our department, all students are welcome to apply. If you are interested, K=
+indly share the following information.&nbsp;</div>
+<div><br>
+</div>
+<div><b>Full Name</b></div>
+<div><b>Cell Phone Number</b></div>
+<div><b>Department</b></div>
+<div><b>Year of Study</b></div>
+<div><br>
+</div>
+<div>Feel free to submit this information via email, or you can reach out t=
+o Professor Jay at (769) 307-1325 via text for further details. Thank you f=
+or considering this opportunity, and we&nbsp;look forward to potentially wo=
+rking with you in the future.</div>
+<div><br>
+</div>
+<div>Best regards,&nbsp;</div>
+<div><br>
+</div>
+<div><b><font size=3D"4">Michael Jay</font></b></div>
+<div>Professor&nbsp;</div>
+<div>Department of Molecular and Pharmaceutics&nbsp;</div>
+</div>
+</div>
+</body>
+</html>
+
+--0000000000001b4390060edb9e64--

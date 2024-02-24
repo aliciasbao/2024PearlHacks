@@ -1,0 +1,1175 @@
+Received: from 127.0.0.1
+ by atlas-production.v2-mail-prod1-gq1.omega.yahoo.com pod-id atlas--production-gq1-7cc7dd9fd-kxb87.gq1.yahoo.com with HTTP; Mon, 5 Feb 2024 17:43:03 +0000
+Return-Path: <K6SC-EEL0-NHRC-L1BC@dzapehtzcv.buzz>
+X-Originating-Ip: [40.107.102.97]
+Received-SPF: pass (domain of dzapehtzcv.buzz designates 40.107.102.97 as permitted sender)
+Authentication-Results: atlas-production.v2-mail-prod1-gq1.omega.yahoo.com;
+ dkim=unknown;
+ spf=pass smtp.mailfrom=dzapehtzcv.buzz;
+ dmarc=unknown header.from=dzapehtzcv.buzz;
+X-Apparently-To: alicia.bao@yahoo.com; Mon, 5 Feb 2024 17:43:04 +0000
+X-YMailISG: ltbZu08WLDvj4sKywG8NQY2U8l0CxgpZaYiYoJ6qEAXAZFnx
+ 0sQ_PK.SnZRy.vwNHY1LJ0bhbEgtnXoeQMYwkl7D.y1FxvTDLFiVNIQqOm9F
+ PDkhYG7lZOKaNVSVGloBF5_sdm2SuUqulkHKMuy1.UalmeMwM2YhL5FaC97K
+ W1W2z6U2bOqSxp1sAW38x_DL97e32wjW3YxUHQBaINbOll5i4mNgCGVnMHBY
+ CRfRsVftkzPN85tUCsPTjw7_ib.N_CbfvJaCynnyUij0UOR5YwcXCRObo7rY
+ gw0cx6IaMF4N1QN4XDh1mK7e.TAGRFBYfXCYfAsSccpi1VX0UgeeX_vm7HoS
+ ESllXgwmJRQ9B_gLXRiM5W4EdBGF9RLOl0Iwxm3E4fbA0kj4bi3ckg3CTeNV
+ cOxpQHsyjlAm8V0jnfha1ItLQ6zSDHx5LoI1oTEeFk6sSQxqOMwUBkhaezPW
+ 28rXwIoiVBLk0YvJObOFrvcBQxDoHnK9XtyM.YjzPvRMJnIAgARFqAzCv1ry
+ fjE5p2YL6mSXHLHqIvEs99K8kUv8mfzV2R3LRGxFfqzsyYGfU5N6NuFUcrcz
+ .8ui3vUp3CpQwjhiHft_0PMY7IMW51_d3_IjKj.INjCzHuCbT3Mquh85Aae_
+ ZSVmHHMtVW.ahw_wjH1d2iuDsbgLIlWwSOBT_5Jbg2ouKl1hmoHe9Roke6rL
+ WahshloM0q5Ho2fDAKirTmY8CJUa7Bwem26ZVUjR2MgQzk2tWk3nZBwSZ.vm
+ PYsuhrMjvhMylLsKXab5Vbkga4b85S0QXAOYzdIEIqiObmJcMp3zs_vPkUOz
+ ydsk5hG_nf56pFIYcXffHXSSzbwvzIIOOc92vqfIPcBy6NJ84bSrlHu5LgWV
+ 6I8b7KD_1Ao587wlJvNxxsxdyDLefnQAyQZWBET34Jds0yU8zdr2VL.v7PZZ
+ 3WKyQDoZemTM7LdpAceviLOMjR22lWY0nWep0KFe9UQVC.HFp9fDn26nwvuo
+ T6xLyQXTzdZnGDi2tC4cEGLuDJqOg9Y6esgpPKMMtyWTXGEVLdjFQBIuZjnW
+ LB4yglu8lWM_MmP6E6nUn7cFhRdLhdJrLAuO7kuMrjN4JJa77aaSDaceg9P_
+ n6rEmMfl3QqEurSNLubQLAZCcisHQITrcxBkhm3vXGIlpWLhYUMlP9zXNLeP
+ U_vK9SjfP_k-
+Received: from 40.107.102.97 (EHLO NAM04-DM6-obe.outbound.protection.outlook.com)
+ by 10.253.31.116 with SMTPs
+ (version=TLS1_2 cipher=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256);
+ Mon, 05 Feb 2024 17:43:03 +0000
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=O5e2V+I7MKqeCTdSn27CHDeahILHL46cb5L3C2jBFRSK2E7Jn6jDmW0dspwUKKbu/2BB6vpxJ0bJD4vuxAPUB092rehRWK4thc1N60l2hk700dHSqhsvZSx3+m6L/lQP0iPz5ug6qGnzzNKCgBtjsAY/Zoys88U8zuBFpsDDwkMzHKMsMvf0wpE7QNGEGmG039M/xSFd35gquc/0mlRx59GJfa7RnpEzgHvYXVrJ/HZI20rMPMctfFKbsiEMUCo1aFxj9T129Uob+hnAclLVN2/hEKpThYven6mymQVtwhu2AjRA3yC+vzhS09bpWY6XB24jll5Ee3Yts+I98QNxtg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=15G6j5b2meGzYSzqRAS3DCM13SupLFRTT3Z2cBzB+KY=;
+ b=cAR/GlEDgGflYVg5h7gpFJDsw0Vm0IvRoPO0lxv1mzUGfoP6UDbslDyWg5a4NwD4ub5T0rC8n2nSQsUwUOzpBy4V5iOhxHjELW1gteZOTP0eFxKfTe40WBi/YDJILxjnUHRSzpZIrIIj3mO7OEXuphUslVd9hclSbK1z0ROGC+Rug2YYTDjYX2eu4I0hwRb1yTacyRo0MHW3lOTFlGzlQGXYfElvry89eettH+TqCVCAdej8wzSy8Nad7ljqTzvw9krdAkFeWTQ+OXK+Blb7KgZYdq5B0+tQLUJ9kxNvDt4+7924H1AQfOwmybEm/xv0bbF1VzJtNFWK7oCDTz6CKA==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+ smtp.mailfrom=dzapehtzcv.buzz; dmarc=pass action=none
+ header.from=dzapehtzcv.buzz; dkim=pass header.d=dzapehtzcv.buzz; arc=none
+Received: from PH8PR12MB6795.namprd12.prod.outlook.com (2603:10b6:510:1c6::14)
+ by MN0PR12MB6367.namprd12.prod.outlook.com (2603:10b6:208:3d3::10) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7270.17; Mon, 5 Feb
+ 2024 17:42:58 +0000
+Received: from PH8PR12MB6795.namprd12.prod.outlook.com
+ ([fe80::d51c:1f07:a885:c73]) by PH8PR12MB6795.namprd12.prod.outlook.com
+ ([fe80::d51c:1f07:a885:c73%4]) with mapi id 15.20.7270.012; Mon, 5 Feb 2024
+ 17:42:58 +0000
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-Csa-Compliance-Source: SFMC
+X-Csa-Complaints: csa-complaints@eco.de
+X-Job: 6426462_352512
+X-Sfmc-Stack: 6
+List-Unsubscribe:
+ <https://click.email.oldnavy.com/subscription_center.aspx?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtaWQiOiI2NDI2NDYyIiwicyI6IjM2NDQxNTM4IiwibGlkIjoiNTUiLCJqIjoiMzUyNTEyIiwiamIiOiIzMzAwMiIsImQiOiI2MDIzMSJ9.iExBVY1QXau0zOHK0B0bw0xNJ_49FZ-pggN-mNmZ8fE>,
+ <mailto:leave-fd8111751a3c402029-fe5d177671600578761c-fecd17757761057f-fe9112747762007b77-ff071773756406@leave.email.oldnavy.com>
+List-ID: <6426366.xt.local>
+From: =?UTF-8?Q?no-reply=40r=E2=80=8C=E2=80=8Ce=E1=9E=B4?=
+ =?UTF-8?Q?p=E1=9E=B5=E2=81=AFo=E2=81=AB=E2=81=AFr?=
+ =?UTF-8?Q?=E2=80=8Dt=2Ea=C2=ADm=E1=9E=B4=E2=81=AC?=
+ =?UTF-8?Q?=E2=81=ADz=2Ecom?= <K6SC-EEL0-NHRC-L1BC@dzapehtzcv.buzz>
+To: alicia.bao@yahoo.com
+Subject: =?UTF-8?Q?A=E1=9E=B4c=E2=80=8E=E1=9E=B4c=E1=9E=B5o?=
+ =?UTF-8?Q?u=E2=81=ABnt_L=E2=80=8C=CD=8Fo=E2=81=AFc?=
+ =?UTF-8?Q?=E2=81=ACk=E2=81=ACe=E1=9E=B5=E2=81=ACd_?=
+ =?UTF-8?Q?ID_=23789=3A9986-5922?=
+Message-ID: <2fd24fda-7ad6-d175-0131-5fb039bb26bd@dzapehtzcv.buzz>
+Date: Mon, 05 Feb 2024 17:42:57 +0000
+X-ClientProxiedBy: MW4PR04CA0258.namprd04.prod.outlook.com
+ (2603:10b6:303:88::23) To PH8PR12MB6795.namprd12.prod.outlook.com
+ (2603:10b6:510:1c6::14)
+Importance: high
+X-Priority: 1
+MIME-Version: 1.0
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: PH8PR12MB6795:EE_|MN0PR12MB6367:EE_
+X-MS-Office365-Filtering-Correlation-Id: 1d24e2ee-b2d0-468b-d9f8-08dc2671e40c
+X-MS-Exchange-SenderADCheck: 1
+X-MS-Exchange-AntiSpam-Relay: 0
+X-Microsoft-Antispam: BCL:0;
+X-Microsoft-Antispam-Message-Info:
+	n4jPcj6lLPBmDIMHEtxRo8tXWPo8GZqeEbky0wJcmZxnJ5Urtj8t0T09+uYyutpgZOdI1E/UOuK2qdvykcKKigLaJfL+gjl0B2TLDmBxuK5W4wrvKSAtRt2RS/XUNtTNYunTIDXeQzcOYkANMIHDdeDcos2fM0VdOjhxKtvMvPn71XwVLjJH2weebmjZ6rAb/TH/LUXe8cDBqXHmgFVp9Uf04ruAsnrnaiGvfJZINfjbP7J7wTXQBDj7+wlBRs5Qp5pxQ4j0A1Ww5hC0M0GyQBkYDR1CQWPjvbd0LmBwYk4mhbPt+ntcIZ7x37QM6Gk2YbEooKgJNyOUIsxx453xCKtlMSMS0OA+8VqKl8I5xqHnHPQ6u9Vf05vRL4j5KlDDXcvs9JlLTxuaGySjgFmg1WG5bmF6wInwPa5Ed6uEXntd6QvPHNZdqN5ajwNJjC+ZFSW4S/kAXI/hr0suozY/NGFFGpAHHsHTjcYqJ+OwmHF3p1FsFNhjUmcaB7OVF5P0uVvcBwdZPtpCjjtcAMDEjIj8WkEVJujpBiioUuNexWOU1mrfzxh4pBDvp6Wtms3djHYs1AGwuNW3NdBvRbgyL9RuOQ/WLcrCzlv09Ya1Ux/fc3SnAltzyOgCVS6AvFc5Xoc/6qdHzcM/uZWk8ZKZf+L9y+p18Ned3+WSpqpK1uHUMtaC7vDR/cDD73tRYzLX
+X-Forefront-Antispam-Report:
+	CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:PH8PR12MB6795.namprd12.prod.outlook.com;PTR:;CAT:NONE;SFS:(13230031)(376002)(136003)(366004)(39860400002)(346002)(396003)(230273577357003)(230922051799003)(64100799003)(186009)(1690799017)(1800799012)(451199024)(6486002)(6512007)(5426002)(26005)(2616005)(19627405001)(31686004)(41320700001)(52116002)(5660300002)(508600001)(8936002)(126090200001)(224303003)(2906002)(36756003)(86362001)(166002)(38100700002)(6506007)(31696002)(41300700001)(38350700005)(66476007)(16670700002)(66946007)(19810500001)(6916009)(66556008)(316002)(786003)(1406899027)(54580400013)(45980500001)(95630200002)(579004)(559001);DIR:OUT;SFP:1102;
+X-MS-Exchange-AntiSpam-MessageData-ChunkCount: 1
+X-MS-Exchange-AntiSpam-MessageData-0:
+	=?utf-8?B?cVhEM09rTW1oNitsSDdpZVcwWUNqNzFyWnEvZm9HVUpBZERmMFd5NGk5L1Zh?=
+ =?utf-8?B?MUViQ1lTR0hBMCtObVQrRmtieEcvelJRYUdiUmcva3o2Tk1VSU1CWVdxZFN2?=
+ =?utf-8?B?TmRnMVYyM2cxNmxiVWN0RTd6VUxINjkyTzZ3a1c4eGR4cW5IUG1jVGp2bmhK?=
+ =?utf-8?B?MjA5dVFqY1BIYUxDQ0Zvd3pjNC8rVWNnbmk1ZDMxUFk5clg5dnhOOFhQVUY5?=
+ =?utf-8?B?U3Mxck0yNDJJYVoyOEFNWmNjNmxNcFh6Rjh0dEs5M2JUQzhzMWJuTTR6VEpL?=
+ =?utf-8?B?YVNxU3YrNDM2cmlXRmo5QndtYk81RHhoUHF4WUZBWkoyeWpSWFBMVGh3dEVM?=
+ =?utf-8?B?RTZJYUtKMEtibGZjd0xoY1hmZUFUV0lUU0VoMzBHZ3FCd0o0SWFDN0o2Vi9k?=
+ =?utf-8?B?NlZyeTBPUElyNVRvZUxJSnJFVURmaHNYaHpuRHd2dU82ZlZCYlRDL0NEWnFJ?=
+ =?utf-8?B?bldFYVlON0J1STJMR250cEdqV04rSVpsNUJzTEcreFBxUDhYbFFUR3RaK1I1?=
+ =?utf-8?B?WmI2cXVPVTBadFI1WnhpRCtCNVEwZWRCNXhJa3BidjNjY1o5bDRkUHVkRTE0?=
+ =?utf-8?B?TVVrVVkvRmtaWVZVekVXUTVaNzlZSU9pVXIrQ1BlRkVUblBNb0o1anFHZjV2?=
+ =?utf-8?B?SlJldzZDaDl3Ylg4dTl6S0lwMFhlakJPYW15ckwwVlY5bFJudk45aTg3UWQ4?=
+ =?utf-8?B?N2NjTzJRSWM0RmNsazhiYm9ESVVtOWtXMkpyTFYvS3ZObjhDeFdybTFobFBk?=
+ =?utf-8?B?VGxZUDBsOE5ZUFEwOVNCbUJITmIzbDRXY1Q5dHZLNURZRHA0R3BVYnZ6cFhj?=
+ =?utf-8?B?U3czODF3YzQvY0dnemZseUxHZXNPckM4V2t0RitKbHlZOHFWWEd1VDY3NDVE?=
+ =?utf-8?B?VEo0a25YbGpseThDRnBST21BckE3UGl5NDNmUk5Jb0xsa2V4WDhBOXRZd2pJ?=
+ =?utf-8?B?dmkyR0hMSXlNOUE0c2F5TkplVzU0anpreWxTRU1IS3dmM2g2THNId3NuTXlt?=
+ =?utf-8?B?ckVxZS82Q3ZYcXRQdzVmTk1TUk11c2lMdU1NQmpKb0thSFBlNHJwaUpDV0Er?=
+ =?utf-8?B?K2JTRHRqYWZjdzZ1UmhLL1FVekhvWndEUkYwUThrb2IrVzA4M2tlRWRqMzJ0?=
+ =?utf-8?B?QkxIWFA0V3JEY29sVXBuQitldkE1QjMxNFcyZDduajBUdkNpenQ2OWgvcWZQ?=
+ =?utf-8?B?OXhBazVIV29vZ1NmRTdmTFdaUWNzSE9IMXl0cGd1TnR4ZGpKYzIxM0RaT0Ja?=
+ =?utf-8?B?QzREMVlFYzltMlNGcEZXRS9iSHpyNUVVSlRySnIyb1BIQWk1US9pN0t5RGo4?=
+ =?utf-8?B?ZzU5U1NyRHo1UjRyT2JvU1dyT3NTdkd5RitKWU9EeVB0bC83UFBxaGNQd3hh?=
+ =?utf-8?B?ZVBxSEhDSXQrQ01BZzgyWVh2TEh2TVo0RkpWWnFkWEVGV25TNkZtbEp1NlJG?=
+ =?utf-8?B?eU1HbTFvclJORVJVNXpjWHEyTjRHSWlveDlYTHRacFhrbnhaVTdvcDU5UU1K?=
+ =?utf-8?B?cXBkUXVac3o0Q3pDLzVrWVhrTlIrTVh3WHpDMWdLbTA3Ukc1dWdmcCtQNTJy?=
+ =?utf-8?B?emY0aFZSYkJ6YVE4WXZlV0l5RW9CSFFtdW94Q2c3SkcxbjZZTkk1S2syRE9F?=
+ =?utf-8?B?OFRIRGlOV0UwTTRPM2p0bllRNW1Bd05KYU5uNDZPeWYwc2Z1bzVPVTc4d2FZ?=
+ =?utf-8?B?bVRnRk85TWFrVXgwdEV0d1ZpVUdCUk1rREk3NUNOUm16NjNubnlLbUdaSzB1?=
+ =?utf-8?B?akM1NjN3TFlxRWtLeXp4QzRvTVhyNzYveWtsVGdLRHptdWVSaE43TlJ6YW1V?=
+ =?utf-8?B?MU43c05JSFVnQTVzR3Z0cVJteVlGVjRqQ0ZKUmtXS2hlUE5maEVJUXV4Rzg2?=
+ =?utf-8?B?aGV3UUVtUWUrUlBlYm9xN2tlbkR6MjBLdnV6M0RoeWU0S2NWS0duSWk0eXpx?=
+ =?utf-8?B?WXFGWVU4SW12OHJoZnFUVzU2MnBDVzRXTDdMM3ZFN3l6QnFuay81Qjd4Wlp0?=
+ =?utf-8?B?RWNVY2dFU1QwZmVJOVN6NDZoY29LVjZ1cGJSZHVtV3ZOT2YrYWpiSXpTSXNV?=
+ =?utf-8?B?SzQvZnBmVjJYR21wSU9rTDJHRzRhZElreUlTNE9oejFVbjZwUmI5YjNDdlRW?=
+ =?utf-8?B?b2ExdmFxc2E1bGFNSEd3aWJhZ1kxUlZqYSs3UyttUi9IQWE1K3NWMXIwc3Vi?=
+ =?utf-8?Q?PIYAAolRZ6Aewp47wAbKK3w=3D?=
+X-OriginatorOrg: dzapehtzcv.buzz
+X-MS-Exchange-CrossTenant-Network-Message-Id: 1d24e2ee-b2d0-468b-d9f8-08dc2671e40c
+X-MS-Exchange-CrossTenant-AuthSource: PH8PR12MB6795.namprd12.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 05 Feb 2024 17:42:58.1059
+ (UTC)
+X-MS-Exchange-CrossTenant-FromEntityHeader: Hosted
+X-MS-Exchange-CrossTenant-Id: c2721df0-ec6d-4b40-9d96-3a13619ed50a
+X-MS-Exchange-CrossTenant-MailboxType: HOSTED
+X-MS-Exchange-CrossTenant-UserPrincipalName: jjIGhSAcUvM/PR6oGBp9wElmw3BYHUc7kRZ8WLkXsInGPYkx9MZWJAxET9BWFgPw7VISmekrkyC7+ZkXC8hGmjdN9ak4GYURp6PhOAf4JIrkseXoX8apNuazUckyHPel
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: MN0PR12MB6367
+Content-Length: 57745
+
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:o=3D"urn:schemas-microso=
+ft-com:office:office" xmlns:v=3D"urn:schemas-microsoft-com:vml"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+<meta content=3D"width=3Ddevice-width, initial-scale=3D1.0" name=3D"viewpor=
+t">
+<meta content=3D"IE=3Dedge" http-equiv=3D"X-UA-Compatible">
+<title> Ooh! You earned 50% OFF ALL sweaters
+
+ + early Black Friday deals from $10
+</title>
+<!--  -->
+<style type=3D"text/css">
+/* Content Builder\0_Templates\Template_Assets\ONUS_Template_CSS_Campaigns_=
+LIVE */
+
+
+
+body {width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-a=
+djust:100%; margin:0; padding:0;}
+.ExternalClass { width: 100%;}
+.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font,=
+ .ExternalClass a, .ExternalClass td, .ExternalClass div { line-height: 100=
+%;}
+#backgroundTable {margin:0; padding:0; width:100% !important; line-height:1=
+00% !important;}
+#outlook a {padding:0;}
+
+
+body, table, td {font-family:Arial,Helvetica,sans-serif;}
+table td {border-collapse:collapse;}
+th {padding:0; margin:0;}
+@-ms-viewport {width:device-width;}
+</style>
+<style>
+
+/* for certona MI */
+@media only screen and (max-width: 639px) {
+  .prod-la { padding-right: 6px !important; }
+  .prod-lc { padding-left: 6px !important; padding-right: 0 !important }
+  .prod-rc { padding-right: 6px !important }
+  .prod-ra { padding-left: 6px !important; padding-right: 0 !important }
+  .block { width: 100% !important; display: block !important }
+  .photo { width: 100% !important; height: auto !important; }
+}
+ =20
+@media only screen and (max-width: 480px) {
+table[class=3D"wrapper"], .wrapper {width: 100% !important;}
+   =20
+ .block {width:100% !important; display:block !important;}
+
+ img[class=3D"photo"], .photo {width: 100% !important; height: auto !import=
+ant;}
+
+   *[class].block { width: 100% !important; display: block !important;}
+   span[class=3D"block"] {display: block !important;}
+  =20
+ .mobile-hidden {display:none !important;}
+
+ .show {display:block !important; margin:0 !important; padding:0 !important=
+; overflow:visible !important; width:auto !important; max-height:inherit !i=
+mportant; height:auto !important;}
+ .reset {border:none !important; margin:0 !important; padding:0 !important;=
+ width:100% !important;}
+ .break {display:block !important;}
+ .width10 {width:10px !important;}
+ .width100 {width:100px !important;}
+ .width320 {width:320px !important;}
+.width420{width: 420px !important;}
+body[data-outlook-cycle] .width420{width: 640px !important;}
+ .w300 {width:300px !important;}
+ .w30 {width:30px !important;}
+ .w37 {width:37px !important;}
+.w40 {width:40px !important;}
+.w41 {width:41px !important;}
+
+ .coupon-code16 { font-size: 16px !important; line-height: 32px !important;=
+}
+ .font10 {font-size:10px !important;}
+ .font11 {font-size:11px !important;}
+
+ .lh14 {line-height:14px !important;}
+.font8 {font-size:8px !important;}
+ .lh10 {line-height:10px !important;}
+
+=20
+ .p0 {padding-left:0 !important; padding-right:0 !important;}
+ .p30 {padding-left:30px !important; padding-right:30px !important;}
+
+.pb5 {padding-bottom:5px !important;}
+ .pb8 {padding-bottom:8px !important;}
+ .pb10 {padding-bottom:10px !important;}
+ .pb15 {padding-bottom:15px !important;}
+
+ .pt5 {padding-top:5px !important;}
+ .pt10 {padding-top:10px !important;}
+ .pt15 {padding-top:15px !important;}
+
+=20
+ .h3 {height:3px !important;}
+ .h5 {height:5px !important;}
+ .h10 {height:10px !important;}
+ .h15 {height:15px !important;}
+ .h52 {height:52px !important;}
+ body[data-outlook-cycle] .h52 {height:101px !important;}
+body[data-outlook-cycle] .logo {width: 200px !important;}
+ .hauto {height:auto !important;}
+
+=20
+.alignleft {text-align:left !important;}
+.alignright {text-align:right !important;}
+.aligncenter {text-align:center !important;}
+
+body[data-outlook-cycle] .cta3 {width: 640px !important;}
+  }
+ =20
+</style>
+
+<!--[if gte mso 9]>
+<xml>
+  <o:OfficeDocumentSettings>
+    <o:AllowPNG/>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+ </o:OfficeDocumentSettings>
+</xml>
+
+<style type=3D"text/css" media=3D"all">
+ /* Outlook 2013+ Height Fix */
+ table, tr, td {border-collapse: collapse;}
+ td { line-height:0px; mso-line-height-rule:exactly }
+</style>
+<![endif]-->
+
+<style>
+@media only screen and (max-width: 639px) {
+  /* Legal */
+  .gap-legal, .gap-legal\0 {padding: 8px 15px !important; font-size: 10px !=
+important; line-height: 13px !important;}
+  .br-legal, .br-legal\0 {font-size: 10px !important; line-height: 13px !im=
+portant;}
+  .on-legal, .on-legal\0 {font-size: 14px !important; line-height: 17px !im=
+portant;}
+  .space-lr20 {padding: 0px 5px 15px 5px !important;}
+}
+</style>
+<!--[if gte mso 9]> <xml> <o:OfficeDocumentSettings> <o:AllowPNG/> <o:Pixel=
+sPerInch>96</o:PixelsPerInch> </o:OfficeDocumentSettings> </xml> <![endif]-=
+->
+</head><body><table class=3D"nl-container" style=3D"table-layout: fixed; ve=
+rtical-align: top; min-width: 320px; Margin: 0 auto; border-spacing: 0; bor=
+der-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; backg=
+round-color: #FFFFFF; width: 100%;" cellpadding=3D"0" cellspacing=3D"0" rol=
+e=3D"presentation" width=3D"100%" bgcolor=3D"#FFFFFF" valign=3D"top">
+    <tbody>
+      <tr style=3D"vertical-align: top;" valign=3D"top">
+        <td style=3D"word-break: break-word; vertical-align: top;" valign=
+=3D"top">
+          <!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" cells=
+pacing=3D"0" border=3D"0"><tr><td align=3D"center" style=3D"background-colo=
+r:#FFFFFF"><![endif]-->
+          <div style=3D"background-color:transparent;">
+            <div class=3D"block-grid " style=3D"Margin: 0 auto; min-width: =
+320px; max-width: 665px; overflow-wrap: break-word; word-wrap: break-word; =
+word-break: break-word; background-color: transparent;">
+              <div style=3D"border-collapse: collapse;display: table;width:=
+ 100%;background-color:transparent;">
+                <!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0"=
+ cellspacing=3D"0" border=3D"0" style=3D"background-color:transparent;"><tr=
+><td align=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0" style=3D"width:665px"><tr class=3D"layout-full-width" style=3D"backgroun=
+d-color:transparent"><![endif]-->
+                <!--[if (mso)|(IE)]><td align=3D"center" width=3D"665" styl=
+e=3D"background-color:transparent;width:665px; border-top: 0px solid transp=
+arent; border-left: 0px solid transparent; border-bottom: 0px solid transpa=
+rent; border-right: 0px solid transparent;" valign=3D"top"><table width=3D"=
+100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"pad=
+ding-right: 0px; padding-left: 0px; padding-top:0px; padding-bottom:0px;"><=
+![endif]-->
+                <div class=3D"col num12" style=3D"min-width: 320px; max-wid=
+th: 665px; display: table-cell; vertical-align: top; width: 665px;">
+                  <div style=3D"width:100% !important;">
+                    <!--[if (!mso)&(!IE)]><!-->
+                    <div style=3D"border-top:0px solid transparent; border-=
+left:0px solid transparent; border-bottom:0px solid transparent; border-rig=
+ht:0px solid transparent; padding-top:0px; padding-bottom:0px; padding-righ=
+t: 0px; padding-left: 0px;">
+                      <!--<![endif]-->
+                      <div class=3D"img-container left autowidth" align=3D"=
+left" style=3D"padding-right: 10px;padding-left: 10px;">
+                        <!--[if mso]><table width=3D"100%" cellpadding=3D"0=
+" cellspacing=3D"0" border=3D"0"><tr style=3D"line-height:0px"><td style=3D=
+"padding-right: 10px;padding-left: 10px;" align=3D"left"><![endif]-->
+                        <div style=3D"font-size:1px;line-height:10px">&nbsp=
+;</div><img class=3D"left autowidth" border=3D"0" src=3D"https://mcusercont=
+ent.com/94d9f20e49e6b943f527637cb/images/857425f9-504e-4c32-a26d-7bd611b319=
+70.png" alt=3D"Amazon" title=3D"Amazon" style=3D"text-decoration: none; -ms=
+-interpolation-mode: bicubic; height: auto; border: 0; width: 100%; max-wid=
+th: 107px; display: block;" width=3D"107">
+                        <!--[if mso]></td></tr></table><![endif]-->
+                      </div>
+                      <!--[if (!mso)&(!IE)]><!-->
+                    </div>
+                    <!--<![endif]-->
+                  </div>
+                </div>
+                <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+                <!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![=
+endif]-->
+              </div>
+            </div>
+          </div>
+          <div style=3D"background-color:transparent;">
+            <div class=3D"block-grid " style=3D"Margin: 0 auto; min-width: =
+320px; max-width: 665px; overflow-wrap: break-word; word-wrap: break-word; =
+word-break: break-word; background-color: transparent;">
+              <div style=3D"border-collapse: collapse;display: table;width:=
+ 100%;background-color:transparent;">
+                <!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0"=
+ cellspacing=3D"0" border=3D"0" style=3D"background-color:transparent;"><tr=
+><td align=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0" style=3D"width:665px"><tr class=3D"layout-full-width" style=3D"backgroun=
+d-color:transparent"><![endif]-->
+                <!--[if (mso)|(IE)]><td align=3D"center" width=3D"665" styl=
+e=3D"background-color:transparent;width:665px; border-top: 0px solid transp=
+arent; border-left: 0px solid transparent; border-bottom: 0px solid transpa=
+rent; border-right: 0px solid transparent;" valign=3D"top"><table width=3D"=
+100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"pad=
+ding-right: 0px; padding-left: 0px; padding-top:0px; padding-bottom:0px;"><=
+![endif]-->
+                <div class=3D"col num12" style=3D"min-width: 320px; max-wid=
+th: 665px; display: table-cell; vertical-align: top; width: 665px;">
+                  <div style=3D"width:100% !important;">
+                    <!--[if (!mso)&(!IE)]><!-->
+                    <div style=3D"border-top:0px solid transparent; border-=
+left:0px solid transparent; border-bottom:0px solid transparent; border-rig=
+ht:0px solid transparent; padding-top:0px; padding-bottom:0px; padding-righ=
+t: 0px; padding-left: 0px;">
+                      <!--<![endif]-->
+                      <table class=3D"divider" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" width=3D"100%" style=3D"table-layout: fixed; vertical-=
+align: top; border-spacing: 0; border-collapse: collapse; mso-table-lspace:=
+ 0pt; mso-table-rspace: 0pt; min-width: 100%; -ms-text-size-adjust: 100%; -=
+webkit-text-size-adjust: 100%;" role=3D"presentation" valign=3D"top">
+                        <tbody>
+                          <tr style=3D"vertical-align: top;" valign=3D"top"=
+>
+                            <td class=3D"divider_inner" style=3D"word-break=
+: break-word; vertical-align: top; min-width: 100%; -ms-text-size-adjust: 1=
+00%; -webkit-text-size-adjust: 100%; padding-top: 5px; padding-right: 10px;=
+ padding-bottom: 5px; padding-left: 10px;" valign=3D"top">
+                              <table class=3D"divider_content" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-layout: =
+fixed; vertical-align: top; border-spacing: 0; border-collapse: collapse; m=
+so-table-lspace: 0pt; mso-table-rspace: 0pt; border-top: 2px solid #FF9900;=
+ width: 100%;" align=3D"center" role=3D"presentation" valign=3D"top">
+                                <tbody>
+                                  <tr style=3D"vertical-align: top;" valign=
+=3D"top">
+                                    <td style=3D"word-break: break-word; ve=
+rtical-align: top; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 10=
+0%;" valign=3D"top"><span></span></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <!--[if (!mso)&(!IE)]><!-->
+                    </div>
+                    <!--<![endif]-->
+                  </div>
+                </div>
+                <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+                <!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![=
+endif]-->
+              </div>
+            </div>
+          </div>
+          <div style=3D"background-color:transparent;">
+            <div class=3D"block-grid " style=3D"Margin: 0 auto; min-width: =
+320px; max-width: 665px; overflow-wrap: break-word; word-wrap: break-word; =
+word-break: break-word; background-color: transparent;">
+              <div style=3D"border-collapse: collapse;display: table;width:=
+ 100%;background-color:transparent;">
+                <!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0"=
+ cellspacing=3D"0" border=3D"0" style=3D"background-color:transparent;"><tr=
+><td align=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0" style=3D"width:665px"><tr class=3D"layout-full-width" style=3D"backgroun=
+d-color:transparent"><![endif]-->
+                <!--[if (mso)|(IE)]><td align=3D"center" width=3D"665" styl=
+e=3D"background-color:transparent;width:665px; border-top: 0px solid transp=
+arent; border-left: 0px solid transparent; border-bottom: 0px solid transpa=
+rent; border-right: 0px solid transparent;" valign=3D"top"><table width=3D"=
+100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"pad=
+ding-right: 0px; padding-left: 0px; padding-top:0px; padding-bottom:0px;"><=
+![endif]-->
+                <div class=3D"col num12" style=3D"min-width: 320px; max-wid=
+th: 665px; display: table-cell; vertical-align: top; width: 665px;">
+                  <div style=3D"width:100% !important;">
+                    <!--[if (!mso)&(!IE)]><!-->
+                    <div style=3D"border-top:0px solid transparent; border-=
+left:0px solid transparent; border-bottom:0px solid transparent; border-rig=
+ht:0px solid transparent; padding-top:0px; padding-bottom:0px; padding-righ=
+t: 0px; padding-left: 0px;">
+                      <!--<![endif]-->
+                      <!--[if mso]><table width=3D"100%" cellpadding=3D"0" =
+cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 10px; paddin=
+g-left: 10px; padding-top: 10px; padding-bottom: 10px; font-family: 'Trebuc=
+het MS', Tahoma, sans-serif"><![endif]-->
+                      <div style=3D"color:#ff9900;font-family:Math Sans, Tr=
+ebuchet, Arial, sans serif; sans-serif;line-height:1.2;padding-top:10px;pad=
+ding-right:10px;padding-bottom:10px;padding-left:10px;">
+                        <div style=3D"line-height: 1.2; font-size: 12px; co=
+lor: #ff9900; font-family:Math Sans, Trebuchet, Arial, sans serif; sans-ser=
+if; mso-line-height-alt: 14px;">
+                          <p style=3D"font-size: 17px; line-height: 1.2; wo=
+rd-break: break-word; text-align: right; mso-line-height-alt: 20px; mso-ans=
+i-font-size: 18px; margin: 0;"><span style=3D"font-size: 17px; mso-ansi-fon=
+t-size: 18px;">=F0=9D=96=A1=F0=9D=97=82=F0=9D=97=85=F0=9D=97=85=F0=9D=97=82=
+=F0=9D=97=87=F0=9D=97=80 =F0=9D=96=A8=F0=9D=97=87=F0=9D=96=BF=F0=9D=97=88=
+=F0=9D=97=8B=F0=9D=97=86=F0=9D=96=BA=F0=9D=97=8D=F0=9D=97=82=F0=9D=97=88=F0=
+=9D=97=87 =F0=9D=96=A8=F0=9D=97=8C=F0=9D=97=8C=F0=9D=97=8E=F0=9D=96=BE=F0=
+=9D=97=8C</span></p>
+                        </div>
+                      </div>
+                      <!--[if mso]></td></tr></table><![endif]-->
+                      <!--[if (!mso)&(!IE)]><!-->
+                    </div>
+                    <!--<![endif]-->
+                  </div>
+                </div>
+                <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+                <!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![=
+endif]-->
+              </div>
+            </div>
+          </div>
+          <div style=3D"background-color:transparent;">
+            <div class=3D"block-grid " style=3D"Margin: 0 auto; min-width: =
+320px; max-width: 665px; overflow-wrap: break-word; word-wrap: break-word; =
+word-break: break-word; background-color: transparent;">
+              <div style=3D"border-collapse: collapse;display: table;width:=
+ 100%;background-color:transparent;">
+                <!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0"=
+ cellspacing=3D"0" border=3D"0" style=3D"background-color:transparent;"><tr=
+><td align=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0" style=3D"width:665px"><tr class=3D"layout-full-width" style=3D"backgroun=
+d-color:transparent"><![endif]-->
+                <!--[if (mso)|(IE)]><td align=3D"center" width=3D"665" styl=
+e=3D"background-color:transparent;width:665px; border-top: 0px solid transp=
+arent; border-left: 0px solid transparent; border-bottom: 0px solid transpa=
+rent; border-right: 0px solid transparent;" valign=3D"top"><table width=3D"=
+100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"pad=
+ding-right: 0px; padding-left: 0px; padding-top:0px; padding-bottom:0px;"><=
+![endif]-->
+                <div class=3D"col num12" style=3D"min-width: 320px; max-wid=
+th: 665px; display: table-cell; vertical-align: top; width: 665px;">
+                  <div style=3D"width:100% !important;">
+                    <!--[if (!mso)&(!IE)]><!-->
+                    <div style=3D"border-top:0px solid transparent; border-=
+left:0px solid transparent; border-bottom:0px solid transparent; border-rig=
+ht:0px solid transparent; padding-top:0px; padding-bottom:0px; padding-righ=
+t: 0px; padding-left: 0px;">
+                      <!--<![endif]-->
+                      <!--[if mso]><table width=3D"100%" cellpadding=3D"0" =
+cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 10px; paddin=
+g-left: 10px; padding-top: 10px; padding-bottom: 10px; font-family: 'Trebuc=
+het MS', Tahoma, sans-serif"><![endif]-->
+                      <div style=3D"color:#ff9900;font-family:Math Sans, Tr=
+ebuchet, Arial, sans serif; sans-serif;line-height:1.2;padding-top:10px;pad=
+ding-right:10px;padding-bottom:10px;padding-left:10px;">
+                        <div style=3D"line-height: 1.2; font-size: 12px; co=
+lor: #ff9900; font-family:Math Sans, Trebuchet, Arial, sans serif; sans-ser=
+if; mso-line-height-alt: 14px;">
+                          <p style=3D"line-height: 1.2; word-break: break-w=
+ord; font-size: 15px; mso-line-height-alt: 18px; margin: 0;"><span style=3D=
+"font-size: 15px;">=F0=9D=96=A7=F0=9D=96=BE=F0=9D=97=85=F0=9D=97=85=F0=9D=
+=97=88 alicia.bao@yahoo.com,</span></p>
+                        </div>
+                      </div>
+                      <!--[if mso]></td></tr></table><![endif]-->
+                      <!--[if (!mso)&(!IE)]><!-->
+                    </div>
+                    <!--<![endif]-->
+                  </div>
+                </div>
+                <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+                <!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![=
+endif]-->
+              </div>
+            </div>
+          </div>
+          <div style=3D"background-color:transparent;">
+            <div class=3D"block-grid " style=3D"Margin: 0 auto; min-width: =
+320px; max-width: 665px; overflow-wrap: break-word; word-wrap: break-word; =
+word-break: break-word; background-color: transparent;">
+              <div style=3D"border-collapse: collapse;display: table;width:=
+ 100%;background-color:transparent;">
+                <!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0"=
+ cellspacing=3D"0" border=3D"0" style=3D"background-color:transparent;"><tr=
+><td align=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0" style=3D"width:665px"><tr class=3D"layout-full-width" style=3D"backgroun=
+d-color:transparent"><![endif]-->
+                <!--[if (mso)|(IE)]><td align=3D"center" width=3D"665" styl=
+e=3D"background-color:transparent;width:665px; border-top: 0px solid transp=
+arent; border-left: 0px solid transparent; border-bottom: 0px solid transpa=
+rent; border-right: 0px solid transparent;" valign=3D"top"><table width=3D"=
+100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"pad=
+ding-right: 0px; padding-left: 0px; padding-top:0px; padding-bottom:0px;"><=
+![endif]-->
+                <div class=3D"col num12" style=3D"min-width: 320px; max-wid=
+th: 665px; display: table-cell; vertical-align: top; width: 665px;">
+                  <div style=3D"width:100% !important;">
+                    <!--[if (!mso)&(!IE)]><!-->
+                    <div style=3D"border-top:0px solid transparent; border-=
+left:0px solid transparent; border-bottom:0px solid transparent; border-rig=
+ht:0px solid transparent; padding-top:0px; padding-bottom:0px; padding-righ=
+t: 0px; padding-left: 0px;">
+                      <!--<![endif]-->
+                      <!--[if mso]><table width=3D"100%" cellpadding=3D"0" =
+cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 10px; paddin=
+g-left: 10px; padding-top: 10px; padding-bottom: 5px; font-family: 'Trebuch=
+et MS', Tahoma, sans-serif"><![endif]-->
+                      <div style=3D"color:#444444;font-family:Math Sans, Tr=
+ebuchet, Arial, sans serif; sans-serif;line-height:1.2;padding-top:10px;pad=
+ding-right:10px;padding-bottom:5px;padding-left:10px;">
+                        <div style=3D"line-height: 1.2; font-size: 12px; co=
+lor: #444444; font-family:Math Sans, Trebuchet, Arial, sans serif; sans-ser=
+if; mso-line-height-alt: 14px;">
+                          <p style=3D"line-height: 1.2; word-break: break-w=
+ord; font-size: 15px; mso-line-height-alt: 18px; margin: 0;"><span style=3D=
+"font-size: 15px;">=F0=9D=96=B6=F0=9D=96=BE =F0=9D=97=89=F0=9D=97=85=F0=9D=
+=96=BA=F0=9D=96=BC=F0=9D=96=BE=F0=9D=96=BD =F0=9D=96=BA =F0=9D=97=8D=F0=9D=
+=96=BE=F0=9D=97=86=F0=9D=97=89=F0=9D=97=88=F0=9D=97=8B=F0=9D=96=BA=F0=9D=97=
+=8B=F0=9D=97=92 =F0=9D=97=81=F0=9D=97=88=F0=9D=97=85=F0=9D=96=BD =F0=9D=97=
+=88=F0=9D=97=87 =F0=9D=97=92=F0=9D=97=88=F0=9D=97=8E=F0=9D=97=8B =F0=9D=96=
+=BA=F0=9D=96=BC=F0=9D=96=BC=F0=9D=97=88=F0=9D=97=8E=F0=9D=97=87=F0=9D=97=8D=
+ =F0=9D=96=BD=F0=9D=97=8E=F0=9D=96=BE =F0=9D=97=8D=F0=9D=97=88 =F0=9D=96=BA=
+ =F0=9D=96=BB=F0=9D=97=82=F0=9D=97=85=F0=9D=97=85=F0=9D=97=82=F0=9D=97=87=
+=F0=9D=97=80 =F0=9D=97=82=F0=9D=97=8C=F0=9D=97=8C=F0=9D=97=8E=F0=9D=96=BE.<=
+/span></p>
+                          <p style=3D"line-height: 1.2; word-break: break-w=
+ord; font-size: 15px; mso-line-height-alt: 18px; margin: 0;"><span style=3D=
+"font-size: 15px;">=F0=9D=96=A3=F0=9D=97=8E=F0=9D=96=BE =F0=9D=97=8D=F0=9D=
+=97=88 =F0=9D=96=BA =F0=9D=97=89=F0=9D=97=8B=F0=9D=97=88=F0=9D=96=BB=F0=9D=
+=97=85=F0=9D=96=BE=F0=9D=97=86 =F0=9D=97=90=F0=9D=97=82=F0=9D=97=8D=F0=9D=
+=97=81 =F0=9D=97=92=F0=9D=97=88=F0=9D=97=8E=F0=9D=97=8B =F0=9D=96=BC=F0=9D=
+=96=BA=F0=9D=97=8B=F0=9D=96=BD , =F0=9D=97=90=F0=9D=96=BE =F0=9D=97=81=F0=
+=9D=96=BA=F0=9D=97=8F=F0=9D=96=BE =F0=9D=96=BB=F0=9D=96=BE=F0=9D=96=BE=F0=
+=9D=97=87 =F0=9D=97=8E=F0=9D=97=87=F0=9D=96=BA=F0=9D=96=BB=F0=9D=97=85=F0=
+=9D=96=BE =F0=9D=97=8D=F0=9D=97=88 =F0=9D=96=BC=F0=9D=97=81=F0=9D=96=BA=F0=
+=9D=97=8B=F0=9D=97=80=F0=9D=96=BE =F0=9D=97=92=F0=9D=97=88=F0=9D=97=8E=F0=
+=9D=97=8B =F0=9D=96=BB=F0=9D=97=82=F0=9D=97=85=F0=9D=97=85.</span></p>
+                        </div>
+                      </div>
+                      <!--[if mso]></td></tr></table><![endif]-->
+                      <!--[if (!mso)&(!IE)]><!-->
+                    </div>
+                    <!--<![endif]-->
+                  </div>
+                </div>
+                <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+                <!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![=
+endif]-->
+              </div>
+            </div>
+          </div>
+          <div style=3D"background-color:transparent;">
+            <div class=3D"block-grid " style=3D"Margin: 0 auto; min-width: =
+320px; max-width: 665px; overflow-wrap: break-word; word-wrap: break-word; =
+word-break: break-word; background-color: transparent;">
+              <div style=3D"border-collapse: collapse;display: table;width:=
+ 100%;background-color:transparent;">
+                <!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0"=
+ cellspacing=3D"0" border=3D"0" style=3D"background-color:transparent;"><tr=
+><td align=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0" style=3D"width:665px"><tr class=3D"layout-full-width" style=3D"backgroun=
+d-color:transparent"><![endif]-->
+                <!--[if (mso)|(IE)]><td align=3D"center" width=3D"665" styl=
+e=3D"background-color:transparent;width:665px; border-top: 0px solid transp=
+arent; border-left: 0px solid transparent; border-bottom: 0px solid transpa=
+rent; border-right: 0px solid transparent;" valign=3D"top"><table width=3D"=
+100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"pad=
+ding-right: 0px; padding-left: 0px; padding-top:0px; padding-bottom:0px;"><=
+![endif]-->
+                <div class=3D"col num12" style=3D"min-width: 320px; max-wid=
+th: 665px; display: table-cell; vertical-align: top; width: 665px;">
+                  <div style=3D"width:100% !important;">
+                    <!--[if (!mso)&(!IE)]><!-->
+                    <div style=3D"border-top:0px solid transparent; border-=
+left:0px solid transparent; border-bottom:0px solid transparent; border-rig=
+ht:0px solid transparent; padding-top:0px; padding-bottom:0px; padding-righ=
+t: 0px; padding-left: 0px;">
+                      <!--<![endif]-->
+                      <!--[if mso]><table width=3D"100%" cellpadding=3D"0" =
+cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 10px; paddin=
+g-left: 10px; padding-top: 5px; padding-bottom: 5px; font-family: 'Trebuche=
+t MS', Tahoma, sans-serif"><![endif]-->
+                      <div style=3D"color:#444444;font-family:Math Sans, Tr=
+ebuchet, Arial, sans serif; sans-serif;line-height:1.2;padding-top:5px;padd=
+ing-right:10px;padding-bottom:5px;padding-left:10px;">
+                        <div style=3D"line-height: 1.2; font-size: 12px; co=
+lor: #444444; font-family:Math Sans, Trebuchet, Arial, sans serif; sans-ser=
+if; mso-line-height-alt: 14px;">
+                          <p style=3D"line-height: 1.2; word-break: break-w=
+ord; font-size: 15px; mso-line-height-alt: 18px; margin: 0;"><span style=3D=
+"font-size: 15px;">=F0=9D=96=B3=F0=9D=97=88 =F0=9D=97=8E=F0=9D=97=87=F0=9D=
+=97=85=F0=9D=97=88=F0=9D=96=BC=F0=9D=97=84=F0=9D=96=BE=F0=9D=96=BD =F0=9D=
+=97=92=F0=9D=97=88=F0=9D=97=8E=F0=9D=97=8B =F0=9D=96=BA=F0=9D=96=BC=F0=9D=
+=96=BC=F0=9D=97=88=F0=9D=97=8E=F0=9D=97=87=F0=9D=97=8D, =F0=9D=97=92=F0=9D=
+=97=88=F0=9D=97=8E =F0=9D=96=BC=F0=9D=96=BA=F0=9D=97=87 =F0=9D=96=BC=F0=9D=
+=97=85=F0=9D=97=82=F0=9D=96=BC=F0=9D=97=84 =F0=9D=96=BB=F0=9D=97=8E=F0=9D=
+=97=8D=F0=9D=97=8D=F0=9D=97=88=F0=9D=97=87 =F0=9D=96=BB=F0=9D=96=BE=F0=9D=
+=97=85=F0=9D=97=88=F0=9D=97=90 =F0=9D=96=BA=F0=9D=97=87=F0=9D=96=BD =F0=9D=
+=97=89=F0=9D=97=8B=F0=9D=97=88=F0=9D=96=BC=F0=9D=96=BE=F0=9D=96=BE=F0=9D=96=
+=BD =F0=9D=97=90=F0=9D=97=82=F0=9D=97=8D=F0=9D=97=81 =F0=9D=97=82=F0=9D=96=
+=BD=F0=9D=96=BE=F0=9D=97=87=F0=9D=97=8D=F0=9D=97=82=F0=9D=97=8D=F0=9D=97=92=
+ =F0=9D=97=8F=F0=9D=96=BE=F0=9D=97=8B=F0=9D=97=82=F0=9D=96=BF=F0=9D=97=82=
+=F0=9D=96=BC=F0=9D=96=BA=F0=9D=97=8D=F0=9D=97=82=F0=9D=97=88=F0=9D=97=87 =
+=F0=9D=97=8D=F0=9D=97=88 =F0=9D=97=89=F0=9D=97=8B=F0=9D=97=88=F0=9D=97=8F=
+=F0=9D=96=BE =F0=9D=97=8D=F0=9D=97=81=F0=9D=96=BA=F0=9D=97=8D =F0=9D=97=82=
+=F0=9D=97=8D =F0=9D=97=82=F0=9D=97=8C =F0=9D=97=92=F0=9D=97=88=F0=9D=97=8E=
+=F0=9D=97=8B =F0=9D=96=BA=F0=9D=96=BC=F0=9D=96=BC=F0=9D=97=88=F0=9D=97=8E=
+=F0=9D=97=87=F0=9D=97=8D.</span></p>
+                        </div>
+                      </div>
+                      <!--[if mso]></td></tr></table><![endif]-->
+                      <!--[if (!mso)&(!IE)]><!-->
+                    </div>
+                    <!--<![endif]-->
+                  </div>
+                </div>
+                <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+                <!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![=
+endif]-->
+              </div>
+            </div>
+          </div>
+          <div style=3D"background-color:transparent;">
+            <div class=3D"block-grid " style=3D"Margin: 0 auto; min-width: =
+320px; max-width: 665px; overflow-wrap: break-word; word-wrap: break-word; =
+word-break: break-word; background-color: transparent;">
+              <div style=3D"border-collapse: collapse;display: table;width:=
+ 100%;background-color:transparent;">
+                <!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0"=
+ cellspacing=3D"0" border=3D"0" style=3D"background-color:transparent;"><tr=
+><td align=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0" style=3D"width:665px"><tr class=3D"layout-full-width" style=3D"backgroun=
+d-color:transparent"><![endif]-->
+                <!--[if (mso)|(IE)]><td align=3D"center" width=3D"665" styl=
+e=3D"background-color:transparent;width:665px; border-top: 0px solid transp=
+arent; border-left: 0px solid transparent; border-bottom: 0px solid transpa=
+rent; border-right: 0px solid transparent;" valign=3D"top"><table width=3D"=
+100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"pad=
+ding-right: 0px; padding-left: 0px; padding-top:0px; padding-bottom:0px;"><=
+![endif]-->
+                <div class=3D"col num12" style=3D"min-width: 320px; max-wid=
+th: 665px; display: table-cell; vertical-align: top; width: 665px;">
+                  <div style=3D"width:100% !important;">
+                    <!--[if (!mso)&(!IE)]><!-->
+                    <div style=3D"border-top:0px solid transparent; border-=
+left:0px solid transparent; border-bottom:0px solid transparent; border-rig=
+ht:0px solid transparent; padding-top:0px; padding-bottom:0px; padding-righ=
+t: 0px; padding-left: 0px;">
+                      <!--<![endif]-->
+                      <div class=3D"button-container" align=3D"center" styl=
+e=3D"padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:1=
+0px;">
+                        <!--[if mso]><table width=3D"100%" cellpadding=3D"0=
+" cellspacing=3D"0" border=3D"0" style=3D"border-spacing: 0; border-collaps=
+e: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;"><tr><td style=3D"=
+padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left:=
+ 10px" align=3D"center"><v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:v=
+ml" xmlns:w=3D"urn:schemas-microsoft-com:office:word" href=3D"https://t.co/=
+8s1b1OUTf8?signature=3Dnewsletter&trackingid=3D144759467081217" style=3D"he=
+ight:21.75pt; width:198pt; v-text-anchor:middle;" arcsize=3D"18%" stroke=3D=
+"false" fillcolor=3D"#ff9900"><w:anchorlock/><v:textbox inset=3D"0,0,0,0"><=
+center style=3D"color:#ffffff; font-family:'Trebuchet MS', Tahoma, sans-ser=
+if; font-size:15px"><![endif]--><a href=3D"https://t.co/8s1b1OUTf8?signatur=
+e=3Dnewsletter&amp;trackingid=3D307538265427383" target=3D"_blank" style=3D=
+"-webkit-text-size-adjust: none; text-decoration: none; display: inline-blo=
+ck; color: #ffffff; background-color: #ff9900; border-radius: 5px; -webkit-=
+border-radius: 5px; -moz-border-radius: 5px; width: auto; width: auto; bord=
+er-top: 1px solid #ff9900; border-right: 1px solid #ff9900; border-bottom: =
+1px solid #ff9900; border-left: 1px solid #ff9900; padding-top: 5px; paddin=
+g-bottom: 5px; font-family:Math Sans, Trebuchet, Arial, sans serif; sans-se=
+rif; text-align: center; mso-border-alt: none; word-break: keep-all;"><span=
+ style=3D"padding-left:40px;padding-right:40px;font-size:15px;display:inlin=
+e-block;"><span style=3D"font-size: 16px; line-height: 1.2; word-break: bre=
+ak-word; mso-line-height-alt: 19px;"><span style=3D"font-size: 15px; line-h=
+eight: 18px;" data-mce-style=3D"font-size: 15px; line-height: 18px;"><stron=
+g>=F0=9D=96=A0=F0=9D=96=BC=F0=9D=96=BC=F0=9D=97=88=F0=9D=97=8E=F0=9D=97=87=
+=F0=9D=97=8D =F0=9D=96=B5=F0=9D=96=BE=F0=9D=97=8B=F0=9D=97=82=F0=9D=96=BF=
+=F0=9D=97=92</strong></span></span></span></a>
+                        <!--[if mso]></center></v:textbox></v:roundrect></t=
+d></tr></table><![endif]-->
+                      </div>
+                      <!--[if (!mso)&(!IE)]><!-->
+                    </div>
+                    <!--<![endif]-->
+                  </div>
+                </div>
+                <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+                <!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![=
+endif]-->
+              </div>
+            </div>
+          </div>
+          <div style=3D"background-color:transparent;">
+            <div class=3D"block-grid " style=3D"Margin: 0 auto; min-width: =
+320px; max-width: 665px; overflow-wrap: break-word; word-wrap: break-word; =
+word-break: break-word; background-color: transparent;">
+              <div style=3D"border-collapse: collapse;display: table;width:=
+ 100%;background-color:transparent;">
+                <!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0"=
+ cellspacing=3D"0" border=3D"0" style=3D"background-color:transparent;"><tr=
+><td align=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0" style=3D"width:665px"><tr class=3D"layout-full-width" style=3D"backgroun=
+d-color:transparent"><![endif]-->
+                <!--[if (mso)|(IE)]><td align=3D"center" width=3D"665" styl=
+e=3D"background-color:transparent;width:665px; border-top: 0px solid transp=
+arent; border-left: 0px solid transparent; border-bottom: 0px solid transpa=
+rent; border-right: 0px solid transparent;" valign=3D"top"><table width=3D"=
+100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"pad=
+ding-right: 0px; padding-left: 0px; padding-top:0px; padding-bottom:0px;"><=
+![endif]-->
+                <div class=3D"col num12" style=3D"min-width: 320px; max-wid=
+th: 665px; display: table-cell; vertical-align: top; width: 665px;">
+                  <div style=3D"width:100% !important;">
+                    <!--[if (!mso)&(!IE)]><!-->
+                    <div style=3D"border-top:0px solid transparent; border-=
+left:0px solid transparent; border-bottom:0px solid transparent; border-rig=
+ht:0px solid transparent; padding-top:0px; padding-bottom:0px; padding-righ=
+t: 0px; padding-left: 0px;">
+                      <!--<![endif]-->
+                      <!--[if mso]><table width=3D"100%" cellpadding=3D"0" =
+cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 10px; paddin=
+g-left: 10px; padding-top: 10px; padding-bottom: 5px; font-family: 'Trebuch=
+et MS', Tahoma, sans-serif"><![endif]-->
+                      <div style=3D"color:#444444;font-family:Math Sans, Tr=
+ebuchet, Arial, sans serif; sans-serif;line-height:1.2;padding-top:10px;pad=
+ding-right:10px;padding-bottom:5px;padding-left:10px;">
+                        <div style=3D"line-height: 1.2; font-size: 12px; co=
+lor: #444444; font-family:Math Sans, Trebuchet, Arial, sans serif; sans-ser=
+if; mso-line-height-alt: 14px;">
+                          <p style=3D"font-size: 15px; line-height: 1.2; wo=
+rd-break: break-word; mso-line-height-alt: 18px; margin: 0;"><span style=3D=
+"font-size: 15px;">=F0=9D=96=B3=F0=9D=97=88 =F0=9D=97=8B=F0=9D=96=BE=F0=9D=
+=97=8C=F0=9D=97=88=F0=9D=97=85=F0=9D=97=8F=F0=9D=96=BE =F0=9D=97=8D=F0=9D=
+=97=81=F0=9D=97=82=F0=9D=97=8C =F0=9D=97=82=F0=9D=97=8C=F0=9D=97=8C=F0=9D=
+=97=8E=F0=9D=96=BE, =F0=9D=97=89=F0=9D=97=85=F0=9D=96=BE=F0=9D=96=BA=F0=9D=
+=97=8C=F0=9D=96=BE =F0=9D=97=8F=F0=9D=96=BE=F0=9D=97=8B=F0=9D=97=82=F0=9D=
+=96=BF=F0=9D=97=92 =F0=9D=97=90=F0=9D=97=82=F0=9D=97=8D=F0=9D=97=81 =F0=9D=
+=97=8D=F0=9D=97=81=F0=9D=96=BE =F0=9D=96=BB=F0=9D=97=82=F0=9D=97=85=F0=9D=
+=97=85=F0=9D=97=82=F0=9D=97=87=F0=9D=97=80 =F0=9D=97=87=F0=9D=96=BA=F0=9D=
+=97=86=F0=9D=96=BE, =F0=9D=96=BA=F0=9D=96=BD=F0=9D=96=BD=F0=9D=97=8B=F0=9D=
+=96=BE=F0=9D=97=8C=F0=9D=97=8C, =F0=9D=96=BA=F0=9D=97=87=F0=9D=96=BD =F0=9D=
+=97=8D=F0=9D=97=81=F0=9D=96=BE =F0=9D=97=8D=F0=9D=96=BE=F0=9D=97=85=F0=9D=
+=96=BE=F0=9D=97=89=F0=9D=97=81=F0=9D=97=88=F0=9D=97=87=F0=9D=96=BE =F0=9D=
+=97=87=F0=9D=97=8E=F0=9D=97=86=F0=9D=96=BB=F0=9D=96=BE=F0=9D=97=8B =F0=9D=
+=97=8B=F0=9D=96=BE=F0=9D=97=80=F0=9D=97=82=F0=9D=97=8C=F0=9D=97=8D=F0=9D=96=
+=BE=F0=9D=97=8B=F0=9D=96=BE=F0=9D=96=BD =F0=9D=97=8D=F0=9D=97=88 =F0=9D=97=
+=92=F0=9D=97=88=F0=9D=97=8E=F0=9D=97=8B =F0=9D=97=89=F0=9D=96=BA=F0=9D=97=
+=92=F0=9D=97=86=F0=9D=96=BE=F0=9D=97=87=F0=9D=97=8D =F0=9D=97=86=F0=9D=96=
+=BE=F0=9D=97=8D=F0=9D=97=81=F0=9D=97=88=F0=9D=96=BD =F0=9D=96=A8=F0=9D=96=
+=BF =F0=9D=97=92=F0=9D=97=88=F0=9D=97=8E =F0=9D=97=81=F0=9D=96=BA=F0=9D=97=
+=8F=F0=9D=96=BE =F0=9D=97=8B=F0=9D=96=BE=F0=9D=96=BC=F0=9D=96=BE=F0=9D=97=
+=87=F0=9D=97=8D=F0=9D=97=85=F0=9D=97=92 =F0=9D=97=86=F0=9D=97=88=F0=9D=97=
+=8F=F0=9D=96=BE=F0=9D=96=BD, =F0=9D=97=92=F0=9D=97=88=F0=9D=97=8E =F0=9D=97=
+=86=F0=9D=96=BA=F0=9D=97=92 =F0=9D=97=87=F0=9D=96=BE=F0=9D=96=BE=F0=9D=96=
+=BD =F0=9D=97=8D=F0=9D=97=88 =F0=9D=97=8E=F0=9D=97=89=F0=9D=96=BD=F0=9D=96=
+=BA=F0=9D=97=8D=F0=9D=96=BE=F0=9D=97=8C =F0=9D=97=8D=F0=9D=97=81=F0=9D=97=
+=82=F0=9D=97=8C =F0=9D=97=82=F0=9D=97=87=F0=9D=96=BF=F0=9D=97=88=F0=9D=97=
+=8B=F0=9D=97=86=F0=9D=96=BA=F0=9D=97=8D=F0=9D=97=82=F0=9D=97=88=F0=9D=97=87=
+ =F0=9D=97=90=F0=9D=97=82=F0=9D=97=8D=F0=9D=97=81 =F0=9D=97=8D=F0=9D=97=81=
+=F0=9D=96=BE =F0=9D=96=BC=F0=9D=96=BA=F0=9D=97=8B=F0=9D=96=BD =F0=9D=97=82=
+=F0=9D=97=8C=F0=9D=97=8C=F0=9D=97=8E=F0=9D=96=BE=F0=9D=97=8B =F0=9D=97=8C=
+=F0=9D=96=BE=F0=9D=97=89=F0=9D=96=BE=F0=9D=97=8B=F0=9D=96=BA=F0=9D=97=8D=F0=
+=9D=96=BE=F0=9D=97=85=F0=9D=97=92.</span></p>
+                        </div>
+                      </div>
+                      <!--[if mso]></td></tr></table><![endif]-->
+                      <!--[if (!mso)&(!IE)]><!-->
+                    </div>
+                    <!--<![endif]-->
+                  </div>
+                </div>
+                <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+                <!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![=
+endif]-->
+              </div>
+            </div>
+          </div>
+          <div style=3D"background-color:transparent;">
+            <div class=3D"block-grid " style=3D"Margin: 0 auto; min-width: =
+320px; max-width: 665px; overflow-wrap: break-word; word-wrap: break-word; =
+word-break: break-word; background-color: transparent;">
+              <div style=3D"border-collapse: collapse;display: table;width:=
+ 100%;background-color:transparent;">
+                <!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0"=
+ cellspacing=3D"0" border=3D"0" style=3D"background-color:transparent;"><tr=
+><td align=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0" style=3D"width:665px"><tr class=3D"layout-full-width" style=3D"backgroun=
+d-color:transparent"><![endif]-->
+                <!--[if (mso)|(IE)]><td align=3D"center" width=3D"665" styl=
+e=3D"background-color:transparent;width:665px; border-top: 0px solid transp=
+arent; border-left: 0px solid transparent; border-bottom: 0px solid transpa=
+rent; border-right: 0px solid transparent;" valign=3D"top"><table width=3D"=
+100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"pad=
+ding-right: 0px; padding-left: 0px; padding-top:0px; padding-bottom:0px;"><=
+![endif]-->
+                <div class=3D"col num12" style=3D"min-width: 320px; max-wid=
+th: 665px; display: table-cell; vertical-align: top; width: 665px;">
+                  <div style=3D"width:100% !important;">
+                    <!--[if (!mso)&(!IE)]><!-->
+                    <div style=3D"border-top:0px solid transparent; border-=
+left:0px solid transparent; border-bottom:0px solid transparent; border-rig=
+ht:0px solid transparent; padding-top:0px; padding-bottom:0px; padding-righ=
+t: 0px; padding-left: 0px;">
+                      <!--<![endif]-->
+                      <!--[if mso]><table width=3D"100%" cellpadding=3D"0" =
+cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 10px; paddin=
+g-left: 10px; padding-top: 5px; padding-bottom: 5px; font-family: 'Trebuche=
+t MS', Tahoma, sans-serif"><![endif]-->
+                      <div style=3D"color:#444444;font-family:Math Sans, Tr=
+ebuchet, Arial, sans serif; sans-serif;line-height:1.2;padding-top:5px;padd=
+ing-right:10px;padding-bottom:5px;padding-left:10px;">
+                        <div style=3D"line-height: 1.2; font-size: 12px; co=
+lor: #444444; font-family:Math Sans, Trebuchet, Arial, sans serif; sans-ser=
+if; mso-line-height-alt: 14px;">
+                          <p style=3D"line-height: 1.2; word-break: break-w=
+ord; font-size: 15px; mso-line-height-alt: 18px; margin: 0;"><span style=3D=
+"font-size: 15px;">=F0=9D=96=B6=F0=9D=96=BE =F0=9D=96=BA=F0=9D=97=89=F0=9D=
+=97=89=F0=9D=97=8B=F0=9D=96=BE=F0=9D=96=BC=F0=9D=97=82=F0=9D=96=BA=F0=9D=97=
+=8D=F0=9D=96=BE =F0=9D=97=92=F0=9D=97=88=F0=9D=97=8E=F0=9D=97=8B =F0=9D=97=
+=89=F0=9D=96=BA=F0=9D=97=8D=F0=9D=97=82=F0=9D=96=BE=F0=9D=97=87=F0=9D=96=BC=
+=F0=9D=96=BE =F0=9D=97=90=F0=9D=97=82=F0=9D=97=8D=F0=9D=97=81 =F0=9D=97=88=
+=F0=9D=97=8E=F0=9D=97=8B =F0=9D=97=8C=F0=9D=96=BE=F0=9D=96=BC=F0=9D=97=8E=
+=F0=9D=97=8B=F0=9D=97=82=F0=9D=97=8D=F0=9D=97=92 =F0=9D=97=86=F0=9D=96=BE=
+=F0=9D=96=BA=F0=9D=97=8C=F0=9D=97=8E=F0=9D=97=8B=F0=9D=96=BE=F0=9D=97=8C.</=
+span></p>
+                        </div>
+                      </div>
+                      <!--[if mso]></td></tr></table><![endif]-->
+                      <!--[if (!mso)&(!IE)]><!-->
+                    </div>
+                    <!--<![endif]-->
+                  </div>
+                </div>
+                <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+                <!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![=
+endif]-->
+              </div>
+            </div>
+          </div>
+          <div style=3D"background-color:transparent;">
+            <div class=3D"block-grid " style=3D"Margin: 0 auto; min-width: =
+320px; max-width: 665px; overflow-wrap: break-word; word-wrap: break-word; =
+word-break: break-word; background-color: transparent;">
+              <div style=3D"border-collapse: collapse;display: table;width:=
+ 100%;background-color:transparent;">
+                <!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0"=
+ cellspacing=3D"0" border=3D"0" style=3D"background-color:transparent;"><tr=
+><td align=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0" style=3D"width:665px"><tr class=3D"layout-full-width" style=3D"backgroun=
+d-color:transparent"><![endif]-->
+                <!--[if (mso)|(IE)]><td align=3D"center" width=3D"665" styl=
+e=3D"background-color:transparent;width:665px; border-top: 0px solid transp=
+arent; border-left: 0px solid transparent; border-bottom: 0px solid transpa=
+rent; border-right: 0px solid transparent;" valign=3D"top"><table width=3D"=
+100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"pad=
+ding-right: 0px; padding-left: 0px; padding-top:0px; padding-bottom:0px;"><=
+![endif]-->
+                <div class=3D"col num12" style=3D"min-width: 320px; max-wid=
+th: 665px; display: table-cell; vertical-align: top; width: 665px;">
+                  <div style=3D"width:100% !important;">
+                    <!--[if (!mso)&(!IE)]><!-->
+                    <div style=3D"border-top:0px solid transparent; border-=
+left:0px solid transparent; border-bottom:0px solid transparent; border-rig=
+ht:0px solid transparent; padding-top:0px; padding-bottom:0px; padding-righ=
+t: 0px; padding-left: 0px;">
+                      <!--<![endif]-->
+                      <!--[if mso]><table width=3D"100%" cellpadding=3D"0" =
+cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 10px; paddin=
+g-left: 10px; padding-top: 5px; padding-bottom: 5px; font-family: 'Trebuche=
+t MS', Tahoma, sans-serif"><![endif]-->
+                      <div style=3D"color:#444444;font-family:Math Sans, Tr=
+ebuchet, Arial, sans serif; sans-serif;line-height:1.2;padding-top:5px;padd=
+ing-right:10px;padding-bottom:5px;padding-left:10px;">
+                        <div style=3D"line-height: 1.2; font-size: 12px; co=
+lor: #444444; font-family:Math Sans, Trebuchet, Arial, sans serif; sans-ser=
+if; mso-line-height-alt: 14px;">
+                          <p style=3D"line-height: 1.2; word-break: break-w=
+ord; font-size: 15px; mso-line-height-alt: 18px; margin: 0;"><span style=3D=
+"font-size: 15px;">=F0=9D=96=B3=F0=9D=97=81=F0=9D=96=BA=F0=9D=97=87=F0=9D=
+=97=84 =F0=9D=97=92=F0=9D=97=88=F0=9D=97=8E =F0=9D=96=BF=F0=9D=97=88=F0=9D=
+=97=8B =F0=9D=97=92=F0=9D=97=88=F0=9D=97=8E=F0=9D=97=8B =F0=9D=96=BC=F0=9D=
+=97=88=F0=9D=97=87=F0=9D=96=BC=F0=9D=96=BE=F0=9D=97=8B=F0=9D=97=87.</span><=
+/p>
+                        </div>
+                      </div>
+                      <!--[if mso]></td></tr></table><![endif]-->
+                      <!--[if (!mso)&(!IE)]><!-->
+                    </div>
+                    <!--<![endif]-->
+                  </div>
+                </div>
+                <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+                <!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![=
+endif]-->
+              </div>
+            </div>
+          </div>
+          <div style=3D"background-color:transparent;">
+            <div class=3D"block-grid " style=3D"Margin: 0 auto; min-width: =
+320px; max-width: 665px; overflow-wrap: break-word; word-wrap: break-word; =
+word-break: break-word; background-color: transparent;">
+              <div style=3D"border-collapse: collapse;display: table;width:=
+ 100%;background-color:transparent;">
+                <!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0"=
+ cellspacing=3D"0" border=3D"0" style=3D"background-color:transparent;"><tr=
+><td align=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0" style=3D"width:665px"><tr class=3D"layout-full-width" style=3D"backgroun=
+d-color:transparent"><![endif]-->
+                <!--[if (mso)|(IE)]><td align=3D"center" width=3D"665" styl=
+e=3D"background-color:transparent;width:665px; border-top: 0px solid transp=
+arent; border-left: 0px solid transparent; border-bottom: 0px solid transpa=
+rent; border-right: 0px solid transparent;" valign=3D"top"><table width=3D"=
+100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"pad=
+ding-right: 0px; padding-left: 0px; padding-top:0px; padding-bottom:0px;"><=
+![endif]-->
+                <div class=3D"col num12" style=3D"min-width: 320px; max-wid=
+th: 665px; display: table-cell; vertical-align: top; width: 665px;">
+                  <div style=3D"width:100% !important;">
+                    <!--[if (!mso)&(!IE)]><!-->
+                    <div style=3D"border-top:0px solid transparent; border-=
+left:0px solid transparent; border-bottom:0px solid transparent; border-rig=
+ht:0px solid transparent; padding-top:0px; padding-bottom:0px; padding-righ=
+t: 0px; padding-left: 0px;">
+                      <!--<![endif]-->
+                      <!--[if mso]><table width=3D"100%" cellpadding=3D"0" =
+cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 10px; paddin=
+g-left: 10px; padding-top: 10px; padding-bottom: 5px; font-family: 'Trebuch=
+et MS', Tahoma, sans-serif"><![endif]-->
+                      <div style=3D"color:#444444;font-family:Math Sans, Tr=
+ebuchet, Arial, sans serif; sans-serif;line-height:1.2;padding-top:10px;pad=
+ding-right:10px;padding-bottom:5px;padding-left:10px;">
+                        <div style=3D"line-height: 1.2; font-size: 12px; co=
+lor: #444444; font-family:Math Sans, Trebuchet, Arial, sans serif; sans-ser=
+if; mso-line-height-alt: 14px;">
+                          <p style=3D"line-height: 1.2; word-break: break-w=
+ord; font-size: 15px; mso-line-height-alt: 18px; margin: 0;"><span style=3D=
+"font-size: 15px;">=F0=9D=96=B2=F0=9D=97=82=F0=9D=97=87=F0=9D=96=BC=F0=9D=
+=96=BE=F0=9D=97=8B=F0=9D=96=BE=F0=9D=97=85=F0=9D=97=92,</span></p>
+                          <p style=3D"line-height: 1.2; word-break: break-w=
+ord; font-size: 15px; mso-line-height-alt: 18px; margin: 0;"><span style=3D=
+"font-size: 15px;">=F0=9D=96=A0=F0=9D=97=86=F0=9D=96=BA=F0=9D=97=93=F0=9D=
+=97=88=F0=9D=97=87<br></span></p>
+                        </div>
+                      </div>
+                      <!--[if mso]></td></tr></table><![endif]-->
+                      <!--[if (!mso)&(!IE)]><!-->
+                    </div>
+                    <!--<![endif]-->
+                  </div>
+                </div>
+                <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+                <!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![=
+endif]-->
+              </div>
+            </div>
+          </div>
+          <div style=3D"background-color:transparent;">
+            <div class=3D"block-grid " style=3D"Margin: 0 auto; min-width: =
+320px; max-width: 665px; overflow-wrap: break-word; word-wrap: break-word; =
+word-break: break-word; background-color: transparent;">
+              <div style=3D"border-collapse: collapse;display: table;width:=
+ 100%;background-color:transparent;">
+                <!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0"=
+ cellspacing=3D"0" border=3D"0" style=3D"background-color:transparent;"><tr=
+><td align=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0" style=3D"width:665px"><tr class=3D"layout-full-width" style=3D"backgroun=
+d-color:transparent"><![endif]-->
+                <!--[if (mso)|(IE)]><td align=3D"center" width=3D"665" styl=
+e=3D"background-color:transparent;width:665px; border-top: 0px solid transp=
+arent; border-left: 0px solid transparent; border-bottom: 0px solid transpa=
+rent; border-right: 0px solid transparent;" valign=3D"top"><table width=3D"=
+100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"pad=
+ding-right: 0px; padding-left: 0px; padding-top:0px; padding-bottom:0px;"><=
+![endif]-->
+                <div class=3D"col num12" style=3D"min-width: 320px; max-wid=
+th: 665px; display: table-cell; vertical-align: top; width: 665px;">
+                  <div style=3D"width:100% !important;">
+                    <!--[if (!mso)&(!IE)]><!-->
+                    <div style=3D"border-top:0px solid transparent; border-=
+left:0px solid transparent; border-bottom:0px solid transparent; border-rig=
+ht:0px solid transparent; padding-top:0px; padding-bottom:0px; padding-righ=
+t: 0px; padding-left: 0px;">
+                      <!--<![endif]-->
+                      <table class=3D"divider" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" width=3D"100%" style=3D"table-layout: fixed; vertical-=
+align: top; border-spacing: 0; border-collapse: collapse; mso-table-lspace:=
+ 0pt; mso-table-rspace: 0pt; min-width: 100%; -ms-text-size-adjust: 100%; -=
+webkit-text-size-adjust: 100%;" role=3D"presentation" valign=3D"top">
+                        <tbody>
+                          <tr style=3D"vertical-align: top;" valign=3D"top"=
+>
+                            <td class=3D"divider_inner" style=3D"word-break=
+: break-word; vertical-align: top; min-width: 100%; -ms-text-size-adjust: 1=
+00%; -webkit-text-size-adjust: 100%; padding-top: 5px; padding-right: 10px;=
+ padding-bottom: 5px; padding-left: 10px;" valign=3D"top">
+                              <table class=3D"divider_content" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-layout: =
+fixed; vertical-align: top; border-spacing: 0; border-collapse: collapse; m=
+so-table-lspace: 0pt; mso-table-rspace: 0pt; border-top: 1px solid #BBBBBB;=
+ width: 100%;" align=3D"center" role=3D"presentation" valign=3D"top">
+                                <tbody>
+                                  <tr style=3D"vertical-align: top;" valign=
+=3D"top">
+                                    <td style=3D"word-break: break-word; ve=
+rtical-align: top; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 10=
+0%;" valign=3D"top"><span></span></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <!--[if (!mso)&(!IE)]><!-->
+                    </div>
+                    <!--<![endif]-->
+                  </div>
+                </div>
+                <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+                <!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![=
+endif]-->
+              </div>
+            </div>
+          </div>
+          <div style=3D"background-color:transparent;">
+            <div class=3D"block-grid " style=3D"Margin: 0 auto; min-width: =
+320px; max-width: 665px; overflow-wrap: break-word; word-wrap: break-word; =
+word-break: break-word; background-color: transparent;">
+              <div style=3D"border-collapse: collapse;display: table;width:=
+ 100%;background-color:transparent;">
+                <!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0"=
+ cellspacing=3D"0" border=3D"0" style=3D"background-color:transparent;"><tr=
+><td align=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0" style=3D"width:665px"><tr class=3D"layout-full-width" style=3D"backgroun=
+d-color:transparent"><![endif]-->
+                <!--[if (mso)|(IE)]><td align=3D"center" width=3D"665" styl=
+e=3D"background-color:transparent;width:665px; border-top: 0px solid transp=
+arent; border-left: 0px solid transparent; border-bottom: 0px solid transpa=
+rent; border-right: 0px solid transparent;" valign=3D"top"><table width=3D"=
+100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"pad=
+ding-right: 0px; padding-left: 0px; padding-top:0px; padding-bottom:0px;"><=
+![endif]-->
+                <div class=3D"col num12" style=3D"min-width: 320px; max-wid=
+th: 665px; display: table-cell; vertical-align: top; width: 665px;">
+                  <div style=3D"width:100% !important;">
+                    <!--[if (!mso)&(!IE)]><!-->
+                    <div style=3D"border-top:0px solid transparent; border-=
+left:0px solid transparent; border-bottom:0px solid transparent; border-rig=
+ht:0px solid transparent; padding-top:0px; padding-bottom:0px; padding-righ=
+t: 0px; padding-left: 0px;">
+                      <!--<![endif]-->
+                      <!--[if mso]><table width=3D"100%" cellpadding=3D"0" =
+cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 10px; paddin=
+g-left: 10px; padding-top: 5px; padding-bottom: 10px; font-family: 'Trebuch=
+et MS', Tahoma, sans-serif"><![endif]-->
+                      <div style=3D"color:#999999;font-family:Math Sans, Tr=
+ebuchet, Arial, sans serif; sans-serif;line-height:1.2;padding-top:5px;padd=
+ing-right:10px;padding-bottom:10px;padding-left:10px;">
+                        <div style=3D"line-height: 1.2; font-size: 12px; co=
+lor: #999999; font-family:Math Sans, Trebuchet, Arial, sans serif; sans-ser=
+if; mso-line-height-alt: 14px;">
+                          <p style=3D"line-height: 1.2; word-break: break-w=
+ord; mso-line-height-alt: NaNpx; margin: 0;">=F0=9D=96=B2=F0=9D=96=BE=F0=9D=
+=97=8B=F0=9D=97=8F=F0=9D=97=82=F0=9D=96=BC=F0=9D=96=BE=F0=9D=97=8C. =F0=9D=
+=96=A8=F0=9D=97=87=F0=9D=96=BC. =F0=9D=97=82=F0=9D=97=8C =F0=9D=96=BA =F0=
+=9D=97=8C=F0=9D=97=8E=F0=9D=96=BB=F0=9D=97=8C=F0=9D=97=82=F0=9D=96=BD=F0=9D=
+=97=82=F0=9D=96=BA=F0=9D=97=8B=F0=9D=97=92 =F0=9D=97=88=F0=9D=96=BF =F0=9D=
+=96=A0=F0=9D=97=86=F0=9D=96=BA=F0=9D=97=93=F0=9D=97=88=F0=9D=97=87.=F0=9D=
+=96=BC=F0=9D=97=88=F0=9D=97=86. =F0=9D=96=A8=F0=9D=97=87=F0=9D=96=BC. =F0=
+=9D=96=A0=F0=9D=97=86=F0=9D=96=BA=F0=9D=97=93=F0=9D=97=88=F0=9D=97=87.=F0=
+=9D=96=BC=F0=9D=97=88=F0=9D=97=86 =F0=9D=97=82=F0=9D=97=8C =F0=9D=96=BA =F0=
+=9D=97=8B=F0=9D=96=BE=F0=9D=97=80=F0=9D=97=82=F0=9D=97=8C=F0=9D=97=8D=F0=9D=
+=96=BE=F0=9D=97=8B=F0=9D=96=BE=F0=9D=96=BD =F0=9D=97=8D=F0=9D=97=8B=F0=9D=
+=96=BA=F0=9D=96=BD=F0=9D=96=BE=F0=9D=97=86=F0=9D=96=BA=F0=9D=97=8B=F0=9D=97=
+=84 =F0=9D=97=88=F0=9D=96=BF =F0=9D=96=A0=F0=9D=97=86=F0=9D=96=BA=F0=9D=97=
+=93=F0=9D=97=88=F0=9D=97=87.=F0=9D=96=BC=F0=9D=97=88=F0=9D=97=86, =F0=9D=96=
+=A8=F0=9D=97=87=F0=9D=96=BC. =F0=9D=96=B3=F0=9D=97=81=F0=9D=97=82=F0=9D=97=
+=8C =F0=9D=97=86=F0=9D=96=BE=F0=9D=97=8C=F0=9D=97=8C=F0=9D=96=BA=F0=9D=97=
+=80=F0=9D=96=BE =F0=9D=97=90=F0=9D=96=BA=F0=9D=97=8C =F0=9D=97=89=F0=9D=97=
+=8B=F0=9D=97=88=F0=9D=96=BD=F0=9D=97=8E=F0=9D=96=BC=F0=9D=96=BE=F0=9D=96=BD=
+ =F0=9D=96=BA=F0=9D=97=87=F0=9D=96=BD =F0=9D=96=BD=F0=9D=97=82=F0=9D=97=8C=
+=F0=9D=97=8D=F0=9D=97=8B=F0=9D=97=82=F0=9D=96=BB=F0=9D=97=8E=F0=9D=97=8D=F0=
+=9D=96=BE=F0=9D=96=BD =F0=9D=96=BB=F0=9D=97=92 =F0=9D=96=A0=F0=9D=97=86=F0=
+=9D=96=BA=F0=9D=97=93=F0=9D=97=88=F0=9D=97=87 =F0=9D=96=B2=F0=9D=96=BE=F0=
+=9D=97=8B=F0=9D=97=8F=F0=9D=97=82=F0=9D=96=BC=F0=9D=96=BE=F0=9D=97=8C =F0=
+=9D=96=A8=F0=9D=97=87=F0=9D=96=BC. =F0=9D=9F=A6=F0=9D=9F=A3=F0=9D=9F=A2 =F0=
+=9D=96=B3=F0=9D=96=BE=F0=9D=97=8B=F0=9D=97=8B=F0=9D=97=92 =F0=9D=96=A0=F0=
+=9D=97=8F=F0=9D=96=BE. =F0=9D=96=AD=F0=9D=97=88=F0=9D=97=8B=F0=9D=97=8D=F0=
+=9D=97=81. =F0=9D=96=B2=F0=9D=96=BE=F0=9D=96=BA=F0=9D=97=8D=F0=9D=97=8D=F0=
+=9D=97=85=F0=9D=96=BE. =F0=9D=96=B6=F0=9D=96=A0 =F0=9D=9F=AB=F0=9D=9F=AA=F0=
+=9D=9F=A3=F0=9D=9F=A2=F0=9D=9F=AB-=F0=9D=9F=A7=F0=9D=9F=A4=F0=9D=9F=A3=F0=
+=9D=9F=A2</p>
+                        </div>
+                      </div>
+                      <!--[if mso]></td></tr></table><![endif]-->
+                      <!--[if (!mso)&(!IE)]><!-->
+                    </div>
+                    <!--<![endif]-->
+                  </div>
+                </div>
+                <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+                <!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![=
+endif]-->
+              </div>
+            </div>
+          </div>
+          <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <!--[if (IE)]></div><![endif]-->
+
+
+</body></html>

@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fish4Phish</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phishing Detector</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    #phishing-sign {
+      font-weight: bold;
+      color: red;
+    }
+  </style>
 </head>
-
 <body>
-    <body>
-        <h1>Suspicious Email Detected</h1>
-        <div id="phishing-sign"></div>
-    </body>
+  <div id="phishing-sign"></div>
+  <script src="popup.js"></script>
 </body>
-<script src="popup.js"></script>
 </html>

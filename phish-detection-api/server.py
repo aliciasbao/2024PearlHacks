@@ -26,7 +26,7 @@ def phishing_detection():
     )
 
     # Extract and return OpenAI response in a JSON list
-    return jsonify({"phishing_signs": response.choices[0].message.content.split('\n')})
+    return jsonify({"phishingSigns": response.choices[0].message.content.split('\n')})
 
 if __name__ == '__main__':
     app.run(debug=True)

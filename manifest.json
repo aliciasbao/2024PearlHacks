@@ -10,15 +10,16 @@
         "type": "module"
     }, 
     "permissions": [
-        "storage" 
+        "storage", "activeTab", "scripting",  "http://*/*",
+        "https://*/*"
     ], 
+    "host_permissions": ["http://127.0.0.1:5000/", "https://*/*"],
     "content_scripts": [
         {
-          "matches": [
-          "https://mail.google.com/*",
-          "https://outlook.office.com/*"],
+          "matches": ["<all_urls>"],
           "css": ["popup/popup.css"],
-          "js": ["popup/popup.js"]
+          "js": ["popup/popup.js"], 
+          "run_at": "document_idle"
         }
       ]
      

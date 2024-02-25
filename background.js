@@ -1,9 +1,11 @@
 // Listen for a click on the extension icon
-chrome.tabs.onUpdated.addListener(async (tabId) => {
-  // Execute content script to scrape email data
-  const emailData = await scrapeEmail(tabId);
-  // Send POST request
-  sendPOSTRequest(emailData);
+chrome.tabs.onUpdated.addListener(async (tabId, changeInfo) => {
+  if (changeInfo.status === 'complete') {
+    // Execute content script to scrape email data
+    const emailData = await scrapeEmail(tabId);
+    // Send POST request
+    sendPOSTRequest(emailData);
+  }
 });
 
 async function scrapeEmail(tabId) {

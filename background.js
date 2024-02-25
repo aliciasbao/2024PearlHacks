@@ -1,7 +1,7 @@
 // Listen for a click on the extension icon
-chrome.tabs.onUpdated.addListener(async (tab) => {
+chrome.tabs.onUpdated.addListener(async (tabId) => {
   // Execute content script to scrape email data
-  const emailData = await scrapeEmail(tab.id);
+  const emailData = await scrapeEmail(tabId);
   // Send POST request
   sendPOSTRequest(emailData);
 });
@@ -35,7 +35,7 @@ function scrapeEmailFromPage() {
 }
 
 function sendPOSTRequest(emailData) {
-  const url = 'http://localhost:5000/phishing_detection';
+  const url = 'http://127.0.0.1:5000/phishing_detection';
   const params = `email_subject=${encodeURIComponent(emailData.subject)}&emails=${encodeURIComponent(emailData.sender)}&message=${encodeURIComponent(emailData.body)}`;
 
   fetch(url, {

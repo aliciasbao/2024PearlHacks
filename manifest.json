@@ -1,0 +1,25 @@
+{
+    "name": "PhishingForPhish",
+    "description": "Prevent phishers from fishing",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "popup/popup.html"}, 
+    "background": {
+        "service_worker": "background.js",
+        "type": "module"
+    }, 
+    "permissions": [
+        "storage" 
+    ], 
+    "content_scripts": [
+        {
+          "matches": [
+          "https://mail.google.com/*",
+          "https://outlook.office.com/*"],
+          "css": ["popup/popup.css"],
+          "js": ["popup/popup.js"]
+        }
+      ]
+     
+  }

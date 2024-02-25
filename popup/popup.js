@@ -8,7 +8,7 @@ chrome.storage.local.get(['emailData'], function (result) {
 
     document.getElementById('phishing-sign').innerText = mainPhishingSign;
     
-    console.log(phishingSigns.slice(0, -1))
+    // console.log(phishingSigns.slice(0, -1))
   }
 });
 
@@ -41,16 +41,17 @@ function highlightPhrases(phrases) {
       if (phrase !== '') {
         const regex = new RegExp(phrase, 'gi');
         // Execute script in the context of the tab to replace text
-        chrome.tabs.executeScript(activeTab.id, {
-          code: `
-            document.body.innerHTML = document.body.innerHTML.replace(
-              ${regex}, 
-              '<span style="background-color: yellow;">${phrase}</span>'
-            );
-          `
+        chrome.scripting.executeScript({
+          target: {tabId: activeTab.id},
+          func: greetUser,
+          args: [regex, phrase],
         });
       }
     });
   });
+}
+
+function greetUser(regex, phrase) {
+  document.body.innerHTML = document.body.innerHTML.replace(regex, `<span style="background-color: yellow;">${phrase}</span>`);
 }
 

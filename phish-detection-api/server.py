@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 # Fetch the OpenAI API key from environment variable
 client = OpenAI(
-  api_key=os.environ['OPENAI_API_KEY'],  # this is also the default, it can be omitted
+  api_key=os.environ['API_KEY_OPENAI'],  # this is also the default, it can be omitted
 )
 
 @app.route('/phishing_detection', methods=['POST'])
@@ -17,14 +17,16 @@ def phishing_detection():
     message = request.form.get('message')
 
     # Call OpenAI API
-    prompt = f"Given this email subject: {email_subject}, emails: {emails}, and message: {message}, provide a list of exact phrases from the email (separated by newlines without any additional commentary) that could signify phishing."
-    response = client.completions.create(
+    prompt = f"Given this email subject: {email_subject}, emails: {emails}, and message: {message}, provide a list of exact phrases from the email (separated by newlines without any additional commentary and '-') that could signify phishing."
+    response = client.chat.completions.create(
         model="gpt-3.5-turbo",
-        prompt=prompt,
+        messages=[
+            {"role": "user", "content": prompt}
+        ],
     )
 
     # Extract and return OpenAI response in a JSON list
-    return jsonify({"phishing_signs": response.choices[0].text.strip().split('\n')})
+    return jsonify({"phishing_signs": response.choices[0].message.content.split('\n')})
 
 if __name__ == '__main__':
     app.run(debug=True)

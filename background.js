@@ -108,22 +108,4 @@ function highlightPhishingSigns(phishingSigns) {
   document.body.innerHTML = emailBody;
 }
 
-// Path: manifest.json
-// {
-//   "manifest_version": 2,
-//   "name": "Phishing Detector",
-//   "version": "1.0",
-//   "permissions": [
-//     "activeTab",
-//     "tabs",
-//     "http://localhost:5000/phishing_detection"
-//   ],
-//   "background": {
-//     "scripts": ["background.js"]
-//   },
-//   "browser_action": {
-//     "default_popup": "popup.html"
-//   }
-// }
-
 

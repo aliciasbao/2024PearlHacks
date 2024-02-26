@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Phishing Detector</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-    }
-    #phishing-sign {
-      font-weight: bold;
-      color: red;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Detector</title>
+    <style>
+        body {
+            font-family: Helvetica, sans-serif; /* Changed font-family to Helvetica */
+            padding: 20px;
+        }
+        #phishing-sign {
+            font-size: medium;
+            color: black;
+        }
+        #message {
+            font-size: small;
+            color: red;
+        }
+    </style>
 </head>
 <body>
-    <h1>Phishing Detector</h1>
-  <div id="phishing-sign"></div>
-  <script src="popup.js"></script>
+        <img src="gallery.jpg" alt="Phishing Sign" style="width:300px">
+        <h1>Phish4Fish Detector</h1>
+        <h2 id="message">Suspicious Message 🛑</h2>
+        <div id="phishing-sign" style="width:300px"></div>
+        <script src="popup.js"></script>
 </body>
 </html>

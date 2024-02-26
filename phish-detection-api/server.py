@@ -17,7 +17,7 @@ def phishing_detection():
     message = request.form.get('message')
 
     # Call OpenAI API
-    prompt = f"Given this email subject: {email_subject}, emails: {emails}, and message: {message}, provide a list of exact phrases from the email (separated ONLY by newlines with no other added symbols) that could signify phishing. On a new line, then explain why this email could be a phishing email without any newlines in the explanation."
+    prompt = f"Given this email subject: {email_subject}, emails: {emails}, and message: {message}, provide a list of exact phrases from the email (separated ONLY by newlines with no other added symbols or numbers like 'option1\noption2\n') that could signify phishing. On a new line, then explain why this email could be a phishing email and why those phrases signify phishing without any newlines in the explanation."
     response = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
